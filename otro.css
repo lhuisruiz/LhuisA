@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     user-select: none;
-    border: 0px solid red;
+    border: px solid red;
 
 }
 
@@ -85,7 +85,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-  
+
 
     background-image: var(--boton);
     background-size: contain;
@@ -126,7 +126,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 13px 10px;
+    padding-top: 10px;
     position: fixed;
     flex-direction: row;
     background-color: var(--ico-header-z);
@@ -274,9 +274,11 @@ h1 {
 
 .botones {
     width: 400px;
+    height: 50px;
+    background-color: rgba(0, 128, 0, 0);
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
     flex-direction: row;
 }
 
@@ -408,7 +410,7 @@ a {
 }
 
 .play {
-    color: rgba(16, 49, 236, 0.788);
+    color: rgb(255, 106, 0);
     font-size: var(--letra-tamaño);
 }
 
@@ -453,7 +455,19 @@ a {
         height: 5px;
     }
 
-    header {}
+    header {
+        max-width: 99%;
+    }
+
+    .ico-menu {
+        background-color: #690981;
+        margin-right: 20px;
+    }
+
+    .switch {
+        background-color: #690981;
+        margin-left: 20px;
+    }
 
     header nav {
         display: none;
@@ -498,16 +512,25 @@ a {
 
     .botones {
         width: 350px;
+
+
         display: flex;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
         flex-direction: row;
     }
 
     .contenido {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+        background-color: #0984cc00;
+    }
 
+    .div-img {
+        height: 401px;
+        background-color: rgba(238, 130, 238, 0);
     }
 
     @keyframes movimiento {
@@ -842,6 +865,18 @@ ul.tabs li a .tab-text {
     }
 }
 
+@media (max-width: 701px) {
+    .contenido {
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: #ffffff00;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+}
+
 @media screen and (max-width: 450px) {
     ul.tabs li a {
         padding: 15px 0px;
@@ -877,6 +912,78 @@ ul.tabs li a .tab-text {
     border-right: 1px solid #75757530;
     border-left: 1px solid #75757530;
 }
+
+
+
+
+
+
+
+
+.Trabajos {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #11111145;
+    margin-bottom: 100px;
+}
+
+.Trabajos,
+h1 {
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+
+}
+
+.ctrabajos {
+    width: 100%;
+    height: auto;
+    background-color: #0984cc00;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.Tarjetatrabajo {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.txttraa {
+    margin-top: 20px;
+    font-weight: 100;
+}
+
+.tarjetaimg {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    filter: brightness(90%);
+
+}
+
+.tarjetaimg:hover {
+    filter: brightness(50%);
+    cursor: pointer;
+    object-view-box: inset(5% 5% 5% 5%);
+
+}
+
+
 
 .h1-des {
     text-align: center;
@@ -914,6 +1021,47 @@ ul.tabs li a .tab-text {
         color: var(--let);
         font-style: normal;
         font-size: 45px;
+    }
+
+    .section-three {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .div-img {
+        width: 100%;
+        background-color: #ffffff00;
+        margin-right: 10px;
+    }
+
+    .img {
+        width: 305px;
+        border: 1px solid rgba(0, 0, 255, 0);
+    }
+
+    .info {
+        width: 100%;
+        background-color: #000000;
+        padding: 10px 30px;
+    }
+
+    .botones {
+        width: 98%;
+    }
+
+    .titulo {
+        font-size: 35px;
+    }
+
+    .contenedor-texto .let {
+
+        font-size: 35px;
+
+    }
+
+    .img-pc {
+        width: 80%;
     }
 
 }
