@@ -52,6 +52,7 @@
                     <li>
                         <a href="#filtros" onclick="abrirCerrarMenu()">filtros</a>
                     </li>
+                    
                     <li onclick="qr();">
                         <a>Qr Code</a>
                     </li>
@@ -95,10 +96,21 @@
                     <div class="botones">
                         <a href="https://wa.me/541144382987" target="_blank"><button data-aos="fade-up"
                                 class="bt1">Whatsapp <i class="fa-brands fa-whatsapp fa-bounce ico"></i> </button></a>
-                        <a href="https://www.instagram.com/lhuruiz/"
+                                <!--=====Boton de cambio==============-->        
+                              <a href="https://www.instagram.com/lhuruiz/"
                             target="_blank"><button data-aos="fade-up" class="bt1">instagram <i
                                     class="fa-brands fa-instagram fa-fade play"></i></button></a>
                     </div><i class=""></i>
+
+                    <!--=====================Boton dos==========================
+                        
+                        
+
+                      <a href="https://play.google.com/store/apps/details?id=lhuis.appipu&hl=es_AR&gl=US"
+                            target="_blank"><button data-aos="fade-up" class="bt1">Descargar App <i
+                                    class="fa-brands fa-google-play fa-bounce play2"></i></button></a>
+                    </div><i class=""></i>
+                    -->
                 </div>
             </div>
             <div data-aos="fade-up" class="div-img">
@@ -117,47 +129,15 @@
             <main class="contenido2">
                 <section class="section-three">
                     <div class="r">
-                        <div class="linea-div-ceparar-historia">
+                        
 
-
-                            <a href="todo.html">
-                                <div data-aos="fade-up" class="caja-h">
-                                    <img class="historia-img"
-                                        src="https://res.cloudinary.com/fotoqe123/image/upload/v1703079795/perfil%20y%20portada/401097170_284409567293295_3598771493991560628_n_jf61ax.jpg"
-                                        alt="">
-                                    <h3 class="h3">Galeria 🖤</h3>
-                                </div>
-                            </a>
-
-
-                            <a href="lhuis.html">
-                                <div data-aos="fade-up" class="caja-h">
-                                    <img class="historia-img"
-                                        src="https://res.cloudinary.com/fotoqe123/image/upload/v1703079820/perfil%20y%20portada/IMG_6731-v1_zzw2ta_lx0nhd_wdyogz.jpg"
-                                        alt="">
-                                    <h3 class="h3">lhuis</h3>
-                                </div>
-                            </a>
-                            <div data-aos="fade-up" data-aos="fade-up" class="caja-h">
-                                <img class="historia-img"
-                                    src="https://res.cloudinary.com/fotoqe123/image/upload/v1703079790/perfil%20y%20portada/380021954_316675800944708_6243534555268328219_n_ipzrzh.jpg"
-                                    alt="">
-                                <h3 class="as1">Sgo Del Est..</h3>
-                                <h3 class="as2">Sgo Del Estero</h3>
-                            </div>
-                        </div>
-
-                        <div class="caja-lines-gal">
+                        <div data-aos="fade-up" class="caja-lines-gal">
                             <div class="lines-gal">
                             </div>
                         </div>
 
-                        <div class="linea-div-ceparar">
-                            <div class="ico-des-h-2">
-                                <i class="fa-solid fa-bars ico-his"></i>
-                                <h3 class="h3-Destadas">Destadas</h3>
-                            </div>
-
+                        <div  data-aos="fade-up" class="linea-div-ceparar">
+                        
                             <div class="ico-des-h">
                                 <a href="https://drive.google.com/drive/folders/1-bq7fc_dtoasVFFm8PRnXxhbfNSRTybo?usp=drive_link"
                                     target="_blank"> <i class="fa-solid fa-download fa-bounce ico-his"></i>
@@ -167,7 +147,7 @@
 
 
                             <div class="ico-des-h-3">
-                                <i class="fa-sharp fa-solid fa-play fa-beat-fade ico-his"></i>
+                                <i class="fa-sharp fa-solid fa-play fa-bounce ico-his"></i>
                                 <h3 class="h3-Destadas">Videos</h3>
                             </div>
                         </div>
@@ -456,30 +436,7 @@ justify-content: center;
             }
 
         </script>
-        <script>
-            setTimeout(function () {
 
-
-                Swal.fire({
-                    imageUrl: 'https://res.cloudinary.com/fotoqe123/image/upload/v1703079829/perfil%20y%20portada/inicio8_ogrb2x.png',
-
-                    //tamaño
-                    imageWidth: 200,
-                    imageHeight: 200,
-                    //cerrar
-                    title: "Oops...",
-                    text: "Esta pagina utiliza musica y fotos en 4k, recomiendo usar una red WIFI, para que no pierdas tus datos de internet,  Saludos.",
-                    padding: '10px',
-                    timer: 20000,
-                    showCloseButton: true,
-                    showConfirmButton: false,
-                    backdrop: `
-    rgb(54 54 54 / 58%)  `,
-                    background: 'linear-gradient(#000,#000)',
-
-                })
-            }, 1000 * 5)     
-        </script>
         <script>
             const preferedColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
             const slider = document.getElementById('slider');
