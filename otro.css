@@ -47,13 +47,13 @@ html {
 }
 
 [data-theme="dark"] {
- 
+
 
     --primary: #000;
     /*fondo*/
-    --fondo-f: #cecece;
+    --fondo-f: #ffff;
     /*fondo boton*/
-    --fondo-boton: #cecece;
+    --fondo-boton: #ffff;
     /* box-shadow*/
     --box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.395);
     /*texto*/
@@ -63,7 +63,7 @@ html {
     /*ico-lateral*/
     --ico-lateral: #000;
     /*ico-header-zombra*/
-    --ico-header-z: #cecece;
+    --ico-header-z: #ffff;
 
     /*let*/
     --let: #690981;
@@ -82,7 +82,7 @@ html {
     background-color: var(--fondo-boton);
 
     border-radius: 69px;
-    transition: 1s;
+
     border: none;
     display: flex;
     justify-content: center;
@@ -235,7 +235,7 @@ h1 {
 
 .contenido {
     width: 100%;
-    height: auto;
+    height: 100vh;
     background-color: #7c7c7c00;
     display: flex;
     align-items: center;
@@ -248,6 +248,7 @@ h1 {
 @media only screen and (min-width: 1024px) {
     .contenido {
         width: 96%;
+
     }
 
 }
@@ -264,7 +265,7 @@ h1 {
 }
 
 .info {
-    width: 350px;
+    width: 400px;
     height: 400px;
     background-color: rgba(102, 255, 0, 0);
     display: flex;
@@ -358,7 +359,8 @@ h1 {
 .bt1 {
     margin: 5px;
     width: 150px;
-    padding: 10px;
+    height: 40px;
+
     border: 1px solid #75757547;
 
     border-radius: 5px;
@@ -415,13 +417,13 @@ a {
     color: rgb(255, 106, 0);
     font-size: var(--letra-tamaño);
 }
+
 .play2 {
     color: rgb(0, 98, 255);
     font-size: var(--letra-tamaño);
     margin-left: 5px;
-    font-size: 20px;
+    font-size: 18px;
 }
-
 
 @keyframes movimiento {
     0% {
@@ -527,12 +529,11 @@ a {
         align-items: center;
         justify-content: center;
         flex-direction: row;
-        flex-wrap: wrap;
-
     }
 
     .contenido {
         display: flex;
+        height: auto;
         flex-direction: row;
         align-items: flex-end;
         justify-content: center;
@@ -774,7 +775,7 @@ a {
     }
 
     .info {
-        width: 360px;
+        width: 390px;
     }
 
     .botones {
@@ -879,6 +880,7 @@ ul.tabs li a .tab-text {
 @media (max-width: 701px) {
     .contenido {
         display: flex;
+
         flex-direction: column-reverse;
         background-color: #ffffff00;
         align-items: center;
@@ -1054,7 +1056,7 @@ h1 {
     .info {
         width: 100%;
         background-color: #00000000;
-        padding: 10px 30px;
+        padding: 10px 20px;
     }
 
     .botones {
