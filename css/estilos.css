@@ -359,6 +359,12 @@ h3 {
 
 
     }
+    .titulo{
+        font-size: 40px;
+    }
+    .contenedor-texto .let {
+        font-size: 40px;
+    }
 
     
 }
