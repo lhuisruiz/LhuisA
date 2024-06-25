@@ -25,6 +25,8 @@
     --boton-hover: #ffffff;
     /*boton-hover-texto*/
     --boton-hover-t: rgb(0, 0, 0);
+
+    --dteg: white;
 }
 
 [data-theme="dark"] {
@@ -47,6 +49,8 @@
     --boton-hover: rgba(11, 3, 168, 0);
     /*boton-hover-texto*/
     --boton-hover-t: rgb(255, 255, 255);
+
+    --dteg: white;
 }
 
 
@@ -263,6 +267,9 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 0px 0px 5px 5px ;
+
+    cursor: help;
 }
 
 .img-dos {
@@ -285,7 +292,7 @@ h3 {
 
 .img-gal:hover{
      filter: brightness(80%);
-    cursor: pointer;
+    cursor: zoom-in;
     object-view-box: inset(5% 5% 5% 5%);
     transition: 3s;
 }
@@ -653,4 +660,10 @@ a {
         width: 133px;
         height: 160px;
     }
+}
+
+
+/*texto veer mas galeriaas*/
+.dteg{
+    color: var(--dteg);
 }
