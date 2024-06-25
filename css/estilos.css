@@ -323,7 +323,16 @@ h3 {
         margin: 4px;
     }
     .detal{
-        width: 111px;}
+        width: 111px;
+        height: 60px;
+    }
+    .llll{
+        font-size: 10px;
+        margin-right: 5px;
+    }
+    p{
+        font-size: 10px;
+    }
 
     .img-gal {
         width: 110px;
