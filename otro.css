@@ -940,8 +940,8 @@ ul.tabs li a .tab-text {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #11111145;
-    margin-bottom: 100px;
+    background-color: #11111100;
+    margin-bottom: 10px;
 }
 
 .Trabajos,
