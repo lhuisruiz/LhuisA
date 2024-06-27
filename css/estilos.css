@@ -334,6 +334,9 @@ h3 {
 
 
 @media (max-width: 600px) {
+    .Trabajos{
+        margin-top: 2px;
+    }
     .div-img {
         margin-top: 1px;
     }

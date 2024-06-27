@@ -117,7 +117,9 @@ html {
     .switch {
         margin-top: 9px;
     }
-
+    .Trabajos{
+        margin-top: 0px;
+    }
 }
 
 .switch input {
@@ -544,7 +546,7 @@ a {
     .contenido {
         display: flex;
         height: auto;
-        flex-direction: row;
+        flex-direction: column;
         align-items: flex-end;
         justify-content: center;
         background-color: #0984cc00;
@@ -889,16 +891,17 @@ ul.tabs li a .tab-text {
     }
 }
 
-@media (max-width: 710px) {
+@media (max-width: 701px) {
     .contenido {
         display: flex;
-        width: auto;
-        height: auto;
         flex-direction: column-reverse;
         background-color: #ffffff00;
         align-items: center;
         justify-content: center;
         align-content: center;
+    }
+    .Trabajos{
+        margin-top: 200px;
     }
 
 }
