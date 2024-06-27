@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     user-select: none;
-    border: 0px solid rgb(4, 0, 255);
+    border: 1px solid rgb(4, 0, 255);
 
 }
 
@@ -512,6 +512,7 @@ a {
     .info {
         width: 390px;
         padding: 15px;
+        height: 300px;
     }
 
     .div-img {
@@ -777,7 +778,7 @@ a {
     border-radius: 5px;
 
 }
-
+/*
 @media only screen and (min-width: 360px) and (max-width: 640px) {
     header {
         width: 100%;
@@ -795,7 +796,7 @@ a {
     .a {
         margin: 3px;
     }
-/*
+
     .j {
         max-width: 360px;
     }
@@ -803,7 +804,7 @@ a {
     .r {
         max-width: 360px;
     }
-*/
+
     .div-img {
         width: 300px;
         margin-top: -10px;
@@ -820,7 +821,7 @@ a {
         font-size: 13px;
     }
 }
-
+*/
 @media only screen and (min-width: 600px) {
     .div-img {
         width: 300px;
