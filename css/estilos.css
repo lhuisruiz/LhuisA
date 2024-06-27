@@ -390,6 +390,20 @@ h3 {
 
     
 }
+@media (max-width: 420px) {
+    .a{
+        width: 182px;
+        border-radius: 110px;
+        background-color: #3498db;
+    }
+    .img-gal{
+        width: 182px;
+        border-radius: 50%;
+    }
+    .detal{
+        width: 182px;
+    }
+}
 
 @media (max-width: 412px) {
     p {
