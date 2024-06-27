@@ -54,8 +54,8 @@ html {
     --let: #363636;
     /*cel boton*/
     --boton: url('https://res.cloudinary.com/fotoqe123/image/upload/v1703591840/perfil%20y%20portada/luna_wg8df0.png');
-/*portada*/
---por: url(img/inicio3.png);
+    /*portada*/
+    --por: url(img/inicio3.png);
 
 }
 
@@ -82,8 +82,8 @@ html {
     --let: #690981;
     /*cel boton*/
     --boton: url('https://res.cloudinary.com/fotoqe123/image/upload/v1703591841/perfil%20y%20portada/sol_z1arhg.png');
-/*portada*/
---por: url(img/inicio.png);
+    /*portada*/
+    --por: url(img/inicio.png);
 
 }
 
@@ -543,8 +543,8 @@ a {
 
     .contenido {
         display: flex;
-        height: 60vh;
-        flex-direction: row;
+        height: auto;
+        flex-direction: column;
         align-items: flex-end;
         justify-content: center;
         background-color: #0984cc00;
@@ -778,6 +778,7 @@ a {
     border-radius: 5px;
 
 }
+
 /*
 @media only screen and (min-width: 360px) and (max-width: 640px) {
     header {
@@ -891,8 +892,8 @@ ul.tabs li a .tab-text {
 @media (max-width: 701px) {
     .contenido {
         display: flex;
-width: auto;
-height: 100vh;
+        width: auto;
+        height: auto;
         flex-direction: column-reverse;
         background-color: #ffffff00;
         align-items: center;
@@ -1026,9 +1027,10 @@ h1 {
 
 
 @media (max-width: 412px) {
-    .Galeria{
+    .Galeria {
         margin-top: 100px;
     }
+
     .descargar {
         width: 10px;
     }
@@ -1099,43 +1101,45 @@ h1 {
 }
 
 @media (max-width: 500px) {
-    .ifo{
-       background-color: red;
-   }
-   .Galeria{
-      
-       margin-top: 100px;
-   }
-   .descargar {
-       width: 10px;
-   }
+    .ifo {
+        background-color: red;
+    }
 
-   .h1-des {
-       text-align: center;
+    .Galeria {
 
-       margin-bottom: 10px;
-   }
+        margin-top: 100px;
+    }
 
-   .psd-4k {
-       margin: 5px;
-       line-height: 25px;
-   }
+    .descargar {
+        width: 10px;
+    }
 
-   .titulo {
-       font-size: 45PX;
-   }
+    .h1-des {
+        text-align: center;
 
-   .contenedor-texto .let {
-       font-weight: 900;
-       color: var(--let);
-       font-style: normal;
-       font-size: 45px;
-   }
+        margin-bottom: 10px;
+    }
 
-   .section-three {
-       width: 100%;
-   }
-   
+    .psd-4k {
+        margin: 5px;
+        line-height: 25px;
+    }
+
+    .titulo {
+        font-size: 45PX;
+    }
+
+    .contenedor-texto .let {
+        font-weight: 900;
+        color: var(--let);
+        font-style: normal;
+        font-size: 45px;
+    }
+
+    .section-three {
+        width: 100%;
+    }
+
 }
 
 
@@ -1157,5 +1161,5 @@ h1 {
         font-size: 10px;
     }
 
-   
+
 }
