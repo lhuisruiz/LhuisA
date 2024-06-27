@@ -542,7 +542,7 @@ a {
 
     .contenido {
         display: flex;
-        height: auto;
+        height: 60vh;
         flex-direction: row;
         align-items: flex-end;
         justify-content: center;
@@ -795,7 +795,7 @@ a {
     .a {
         margin: 3px;
     }
-
+/*
     .j {
         max-width: 360px;
     }
@@ -803,7 +803,7 @@ a {
     .r {
         max-width: 360px;
     }
-
+*/
     .div-img {
         width: 300px;
         margin-top: -10px;
@@ -890,7 +890,8 @@ ul.tabs li a .tab-text {
 @media (max-width: 701px) {
     .contenido {
         display: flex;
-
+width: auto;
+height: 100vh;
         flex-direction: column-reverse;
         background-color: #ffffff00;
         align-items: center;
@@ -1019,6 +1020,10 @@ h1 {
     line-height: 25px;
 }
 
+
+
+
+
 @media (max-width: 412px) {
     .Galeria{
         margin-top: 100px;
@@ -1091,6 +1096,47 @@ h1 {
     }
 
 }
+
+@media (max-width: 500px) {
+    .ifo{
+       background-color: red;
+   }
+   .Galeria{
+      
+       margin-top: 100px;
+   }
+   .descargar {
+       width: 10px;
+   }
+
+   .h1-des {
+       text-align: center;
+
+       margin-bottom: 10px;
+   }
+
+   .psd-4k {
+       margin: 5px;
+       line-height: 25px;
+   }
+
+   .titulo {
+       font-size: 45PX;
+   }
+
+   .contenedor-texto .let {
+       font-weight: 900;
+       color: var(--let);
+       font-style: normal;
+       font-size: 45px;
+   }
+
+   .section-three {
+       width: 100%;
+   }
+   
+}
+
 
 @media (max-width: 914px) {
     .descargar {

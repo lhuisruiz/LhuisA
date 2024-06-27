@@ -339,9 +339,10 @@ h3 {
     }
 
     .a {
-        width: 111px;
-        height: 150px;
-        margin: 4px;
+        width: 240px;
+        height: 340px;
+        margin: 9px;
+        background: red;
     }
     .detal{
         width: 111px;
@@ -356,12 +357,12 @@ h3 {
     }
 
     .img-gal {
-        width: 110px;
-        height: 150px;
+        width: 240px;
+        height: 340px;
     }
 
     .single-img {
-        height: 151px;
+        height: 340px;
     }
 
     .div-img {
@@ -421,7 +422,7 @@ h3 {
         height: 300px;
     }
     .contenido {
-        height: 100vh;
+        height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
