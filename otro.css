@@ -544,7 +544,7 @@ a {
     .contenido {
         display: flex;
         height: auto;
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-end;
         justify-content: center;
         background-color: #0984cc00;
@@ -889,7 +889,7 @@ ul.tabs li a .tab-text {
     }
 }
 
-@media (max-width: 701px) {
+@media (max-width: 710px) {
     .contenido {
         display: flex;
         width: auto;
