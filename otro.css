@@ -48,7 +48,7 @@ html {
     /*ico-lateral*/
     --ico-lateral: #ffff;
     /*ico-header-zombra*/
-    --ico-header-z: rgba(0, 0, 0, 0.534);
+    --ico-header-z: rgba(0, 0, 0, 0);
 
     /*let*/
     --let: #363636;
@@ -76,7 +76,7 @@ html {
     /*ico-lateral*/
     --ico-lateral: #000;
     /*ico-header-zombra*/
-    --ico-header-z: #ffffff85;
+    --ico-header-z: #ffffff00;
 
     /*let*/
     --let: #690981;
