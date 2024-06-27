@@ -251,7 +251,7 @@ h1 {
 .contenido {
     width: 100%;
     height: 100vh;
-    background-color: #7c7c7c00;
+    background-color: #dd080800;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -546,11 +546,15 @@ a {
     .contenido {
         display: flex;
         height: auto;
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-end;
         justify-content: center;
         background-color: #0984cc00;
     }
+    .Trabajos{
+        margin-top: 200px;
+    }
+
 
     .div-img {
         height: auto;
@@ -900,10 +904,7 @@ ul.tabs li a .tab-text {
         justify-content: center;
         align-content: center;
     }
-    .Trabajos{
-        margin-top: 200px;
-    }
-
+    
 }
 
 @media screen and (max-width: 450px) {
