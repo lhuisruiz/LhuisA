@@ -48,7 +48,7 @@ html {
     /*ico-lateral*/
     --ico-lateral: #ffff;
     /*ico-header-zombra*/
-    --ico-header-z: rgba(0, 0, 0, 0);
+    --ico-header-z: rgba(0, 0, 0, 0.308);
 
     /*let*/
     --let: #363636;
@@ -76,7 +76,7 @@ html {
     /*ico-lateral*/
     --ico-lateral: #000;
     /*ico-header-zombra*/
-    --ico-header-z: #ffffff00;
+    --ico-header-z: #ffffffd7;
 
     /*let*/
     --let: #690981;
@@ -114,6 +114,9 @@ html {
 }
 
 @media (max-width: 600px) {
+    header{
+        background-color: transparent;
+    }
     .switch {
         margin-top: 9px;
     }
@@ -215,6 +218,9 @@ header nav ul li a {
 
     .bt-menu {
         display: contents;
+    }
+    header{
+        background: transparent;
     }
 }
 
@@ -963,7 +969,6 @@ ul.tabs li a .tab-text {
 
 .Trabajos,
 h1 {
-    padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
 
