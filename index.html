@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>lhuis</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://res.cloudinary.com/fotoqe123/image/upload/v1720052795/ABAUT/logo-modified_co2oj7_uaw1ee.ico">
+    <link rel="canonical" href="https://bit.ly/lhuisruiz">
+    <meta property="og:site_name" content="lhuis">
+    <meta property="og:title" content="lhuis">
+    <meta property="og:url" content="https://bit.ly/lhuisruiz">
+    <meta property="og:type" content="website">
+    <meta property="og:ttl" content="864000">
+    <meta property="og:description"
+        content="Hola soy lhuis, Fotografo por diversión, Quererse a uno mismo es el principio de un romance para toda la vida. 🖤">
+    <meta property="og:image"
+        content="https://res.cloudinary.com/fotoqe123/image/upload/v1720055296/ABAUT/social-pixieset-v3-r_ci9v6c.jpg">
+    <meta property="og:image:width" content="345">
+    <meta property="og:image:height" content="518">
+    <meta itemprop="name" content="lhuis">
+    <meta itemprop="url" content="https://bit.ly/lhuisruiz">
+    <meta itemprop="description"
+        content="Hola soy lhuis, Fotografo por diversión, Quererse a uno mismo es el principio de un romance para toda la vida. 🖤">
+    <meta itemprop="thumbnailUrl"
+        content="https://res.cloudinary.com/fotoqe123/image/upload/v1720055296/ABAUT/social-pixieset-v3-r_ci9v6c.jpg">
+    <meta name="twitter:title" content="lhuis">
+    <meta name="twitter:image"
+        content="https://res.cloudinary.com/fotoqe123/image/upload/v1720055296/ABAUT/social-pixieset-v3-r_ci9v6c.jpg">
+    <meta name="twitter:url" content="https://bit.ly/lhuisruiz">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:description"
+        content="Hola soy lhuis, Fotografo por diversión, Quererse a uno mismo es el principio de un romance para toda la vida. 🖤">
+    <meta name="description"
+        content="Hola soy lhuis, Fotografo por diversión, Quererse a uno mismo es el principio de un romance para toda la vida. 🖤">
+    <meta name="robots" content="noindex">
+
+</head>
+
+<body>
+    <div class="slideshow" id="inicio">
+        <div class="c-menu">
+            <div class="menu">
+                <li><a class="E" href="#inicio">Inicio</a> </li>
+                <li><a class="E" href="#Galeria">Galeria</a> </li>
+                <li><a class="E" href="#SobreMi">Sobre Mi</a> </li>
+                <li onclick="qr();">Qr </li>
+                <li><a class="E" href="http://action_notifications">Notificaciones</li></a>
+                </li>
+                <a href="https://lhuisruiz.github.io/play/">
+                    <li>Play</li>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="c-datos">
+
+            <div class="info-c">
+                <h1>HOLA SOY <span class="typed"></span> </h1>
+                <!---  <div class="L-"></div>
+             
+                <p>Fotografo por diversión, No te compliques la
+                    vida, Quererse a uno mismo es el principio de un
+                    romance para toda la vida. </p>-->
+                <button onclick="contacto();">Hablamos</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="galeria" id="Galeria">
+        <div class="d-g">
+            <h3>Mis Trabajos</h3>
+        </div>
+
+        <a href="15.html">
+            <div class="item">
+                <img class="item-img" id="img2" src="https://lhuisruiz.github.io/15/img/f%20(12).jpg" alt="">
+                <button class="ver-bt">15</button>
+            </div>
+        </a>
+
+        <a href="bodas.html">
+            <div class="item">
+                <img class="item-img" id="img3"
+                    src="https://lh3.googleusercontent.com/pw/AP1GczP36M25okeefhdCxMMSe0I6znFCsI3pHad3BuEp6u37dAG512hh9tTzJ1N1HDJQ20HDCDaSyibVh31JXiHr9lTCOBJbRNu6axu_uMkBDLejdcjdCh6EFTp72U_7mfb8ZUogBcQKmK7zmLFpUKXhnIE=w428-h642-s-no-gm?authuser=0"
+                    alt="">
+                <button class="ver-bt">bodas</button>
+            </div>
+        </a>
+
+
+
+
+
+        <a href="retratos.html">
+            <div class="item">
+                <img class="item-img" id="img1"
+                    src=https://lh3.googleusercontent.com/pw/AP1GczPFea-caAInpQmWjk60v5xEgVTE7UVznp12CMY8SgbzNw-oosA5iCAkRhWFb8JUX-GrnWunfq8ZsBi-ZFpNH0mOkA4Q_LMQTM3bbADKnJf5RdedPGGD8mklujajFlnFVY02qDAQC8G9i0s2XYCzW1g=w423-h634-s-no-gm?authuser=0"
+                    alt="">
+                <button o class="ver-bt">Retratos</button>
+            </div>
+        </a>
+    </div>
+    <div>
+
+    </div>
+
+    </div>
+    <!--
+    <div class="s-m">
+    </div>-->
+    <footer id="SobreMi">
+        @lhuis ruiz
+    </footer>
+</body>
+<script>
+    window.addEventListener("scroll", function () {
+        let div = document.querySelector(".c-menu");
+        if (window.scrollY > 50) { // Cuando el usuario baje 50px
+            div.classList.add("scrolled");
+        } else {
+            div.classList.remove("scrolled");
+        }
+    });
+
+</script>
+<script>
+    // Lista de imágenes para ambos divs
+    const imagenes = [
+        "https://lh3.googleusercontent.com/pw/AP1GczM0cNSF0qu2AcxogFQPi3VO2ROOvW49Yg2NDpynh4crvoPNcDyQZlDUhpYXwZWWfi2yQF69oJqqhJl4lYTp2klO3b9Tnrfj2F8ApOwzSu4xXzU06mvTVTQCCOjb169cBjmyHebyP3Pv6AWrdSTrVw=w428-h642-s-no-gm?authuser=2",
+        "https://lh3.googleusercontent.com/pw/AP1GczOT6u0F5mALdOlNvoaDUi4vGC4TXMIFtUqcEXOy-jWM2ZmnqQ9WfnRHm1HAYsQMzM9xTR5uWQ-VtnzBfcszXzl_XUiq9oTsxTdmE2yIkRHIE8Cf9ZSuOcRhcFGkaV7ZUa9VZndUNBgBTEQVcmUhbjA=w428-h642-s-no-gm?authuser=5",
+        "https://lh3.googleusercontent.com/pw/AP1GczPL7SiRBwXjT2ZNsqKMtXwaXVH2yD_sMMJy_PUnfyytQoodhv3o1fAheo4RdPgC4cwb-OH072CWa6qtY8TK3h5K6uscRhnjPM86WFVWr9N4jq-6gUp-PW7wax_veBSpbj-UBTKUJlayB0Ioo9fasw=w423-h634-s-no-gm?authuser=0"
+    ];
+
+    const imagenes2 = [
+        "https://lh3.googleusercontent.com/pw/AP1GczO68U1PMaHGwO2kXPMOPbEykz6wiUewJ7taMqFty33LVlE8m3uy2JU8niD78orWo_sIxlEqS8UdgSRiJMT31E50zShOMIMpv_9WiTcQWleKtByjn-cLHsLAwLMZ2aqwaqscQJ9yv4aBtosPAF3lG32o=w481-h642-s-no-gm?authuser=0",
+        "https://lhuisruiz.github.io/15/img/f%20(12).jpg",
+        "https://lh3.googleusercontent.com/pw/AP1GczO68U1PMaHGwO2kXPMOPbEykz6wiUewJ7taMqFty33LVlE8m3uy2JU8niD78orWo_sIxlEqS8UdgSRiJMT31E50zShOMIMpv_9WiTcQWleKtByjn-cLHsLAwLMZ2aqwaqscQJ9yv4aBtosPAF3lG32o=w481-h642-s-no-gm?authuser=0"
+    ];
+    const imagenes3 = [
+        "https://lh3.googleusercontent.com/pw/AP1GczP8G5tsUhhqytrQ9mDBRdKouEwQxYf3BplkuY0lo6SlbgQcMlH3vFfZCE2VOcKRivAFh7RVhkZjC2DIXRdyoD3xXzTAsOjbTD5RerYRpxxQ3pJbNKQu42rEDB0H6pDysAweaEE4lgl8-9GczUZ0y4cF=w423-h634-s-no-gm?authuser=0",
+        "https://lh3.googleusercontent.com/pw/AP1GczPzpiiqKtwedi_-Rv0hK970Q4IMSXIVz7OQ1eEpA_Y8xJQwRfi8bJy87wyglvAxEBVPCpl8mMiMRAjBM46PR0GqZGIDEPa0Owvfbym4x2Eugu8-58oSUHelV5Coo1i3ispNvkgQT0YpdTukmj2SDI4H=w509-h339-s-no-gm?authuser=0",
+        "https://lh3.googleusercontent.com/pw/AP1GczP25FRB1l5-BR8Yh7mhqXGxQRV9wXY-jnLOnz0Zul2SARkzEEsaaDwYO-A82mynhfE2uFv-thoWd6JFazsjRI80jY8lnnoa0mZzT4GW0Kv2RxR4S3hnth3RLH5fKUhzggjzmfHbMcnxnDYx9hORvCU=w423-h634-s-no-gm?authuser=0"
+    ];
+    let index = 0;
+
+    function cambiarImagenes() {
+        index = (index + 1) % imagenes.length; // Ciclo de imágenes
+        document.getElementById("img1").src = imagenes[index];
+        document.getElementById("img2").src = imagenes2[index];
+        document.getElementById("img3").src = imagenes3[index];
+
+    }
+
+    setInterval(cambiarImagenes, 11000); // Cambia cada 3 segundos
+
+</script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script src="main.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="app.js"></script>
+
+</html>
