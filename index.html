@@ -39,6 +39,13 @@
     <meta name="robots" content="noindex">
 
 </head>
+<div class="slideshow-container">
+    <img class="slide" src="img/1 - copia.jpg" alt="Imagen 1">
+    <img class="slide" src="img/c.jpg" alt="Imagen 2">
+    <img class="slide" src="img/b.jpg" alt="Imagen 3">
+    <img class="slide" src="img/d.jpg" alt="Imagen 4">
+    <img class="slide" src="img/7.jpg" alt="Imagen 5">
+</div>
 
 <body>
     <div class="slideshow" id="inicio">
@@ -50,9 +57,10 @@
                 <li onclick="qr();">Qr </li>
                 <a href="https://lhuisruiz.github.io/play/">
                     <li>Play</li>
-                <li><a class="E" href="http://action_notifications">Notificaciones</li></a>
+                    <li><a class="E" href="http://action_notifications">Notificaciones</li>
+                </a>
                 </li>
-                
+
                 </a>
             </div>
         </div>
@@ -126,6 +134,23 @@
         @lhuis ruiz
     </footer>
 </body>
+<script>
+    let slides = document.querySelectorAll(".slide");
+    let index = 0;
+
+    function changeSlide() {
+        slides.forEach((slide, i) => {
+            slide.classList.remove("active");
+        });
+
+        slides[index].classList.add("active");
+        index = (index + 1) % slides.length;
+    }
+
+    changeSlide(); // Mostrar la primera imagen al cargar
+    setInterval(changeSlide, 3000); // Cambia cada 3 segundos
+
+</script>
 <script>
     window.addEventListener("scroll", function () {
         let div = document.querySelector(".c-menu");
