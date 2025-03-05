@@ -11,4 +11,4 @@ function changeSlide() {
 }
 
 changeSlide(); // Mostrar la primera imagen al cargar
-setInterval(changeSlide, 3000); // Cambia cada 3 segundos
+setInterval(changeSlide, 333000); // Cambia cada 3 segundos
