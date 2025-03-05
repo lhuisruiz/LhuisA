@@ -62,7 +62,7 @@ function contacto() {
 		'                 class="fa-brands fa-google-play fa-bounce i-2"></i> </button></a>' +
 	'	<div class="L-3"></div>' +
 		'    <a href="http://action_share"' +
-		'        target="_blank"><button class="apk"></i>share </button></a>' +
+		'        ><button class="apk"></i>share </button></a>' +
 		' </div>',
 		//tamaño
 		imageWidth: 300,
