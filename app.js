@@ -7,3 +7,5 @@ const imagenes = ["img/a.jpg", "img/b.jpg", "img/c.jpg"]; // Rutas de imágenes
   }
 
   setInterval(cambiarImagen, 15000); // Cambia cada 3 segundos
+
+  

@@ -257,10 +257,16 @@ button:hover {
 
 
 .slideshow-container {
-    position: relative;
+   
+
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    animation: cambio 10s infinite alternate ease-in-out;
+    display: flex;
+
+
 }
 
 .slide {
@@ -326,13 +332,13 @@ button:hover {
 
 
 /* Estilo del fondo */
-.slideshow::after {
+.slideshow-container::after {
     width: 100%;
     height: 100vh;
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(51, 10, 233, 0.466);
+    background: rgba(2, 5, 214, 0.466);
 }
 
 footer {
