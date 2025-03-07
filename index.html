@@ -41,28 +41,37 @@
 </head>
 
 <body>
-    <div class="contenido">  
-                <button class="abrir-m">abir</button>
+    <div class="contenido">
         <div class="slideshow-container" id="inicio">
-            
+
             <img class="slide" src="img/1 - copia.jpg" alt="Imagen 1">
             <img class="slide" src="img/c.jpg" alt="Imagen 2">
             <img class="slide" src="img/b.jpg" alt="Imagen 3">
             <img class="slide" src="img/d.jpg" alt="Imagen 4">
             <img class="slide" src="img/7.jpg" alt="Imagen 5">
             <div class="c-menu">
-         
+                <button class="abrir-m" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+                <img class="logo-img" onclick="contacto();"
+                    src="https://res.cloudinary.com/fotoqe123/image/upload/v1720052795/ABAUT/logo-modified_co2oj7_uaw1ee.ico"
+                    alt="">
+
                 <div class="menu">
-                 
+
+                    <div class="div-g">
+                        <li class="cerrar-m" onclick="toggleMenu()">✖</li>
+                       <a  href="http://action_notifications"> <li><i class="fa-solid fa-bell i"></i></li></a>
+                    </div>
+                    <h2>LHUIS RUIZ</h2>
+                    <div class="l-4"></div>
                     <li><a class="E" href="#inicio">Inicio</a> </li>
                     <li><a class="E" href="#Galeria">Galeria</a> </li>
                     <li><a class="E" href="#SobreMi">Sobre Mi</a> </li>
                     <li onclick="qr();">Qr </li>
-
                     <a href="https://lhuisruiz.github.io/play/">
                         <li>Play</li>
-                        <li><a class="E" href="http://action_notifications">Notificaciones</li>
                     </a>
+                    <div class="l-4"></div>
+
                     </li>
 
                     </a>
@@ -82,21 +91,15 @@
                 </div>
 
             </div>
-
         </div>
-        
         <div class="galeria" id="Galeria">
             <div class="d-g">
                 <h3>Mis Trabajos</h3>
             </div>
-
-            <a href="15.html">
-                <div class="item">
-                    <img class="item-img" id="img2" src="https://lhuisruiz.github.io/15/img/f%20(12).jpg" alt="">
-                    <button class="ver-bt">15</button>
-                </div>
-            </a>
-
+            <div class="item">
+                <img class="item-img" id="img2" src="https://lhuisruiz.github.io/15/img/f%20(12).jpg" alt="">
+                <button class="ver-bt">15</button>
+            </div>
             <a href="bodas.html">
                 <div class="item">
                     <img class="item-img" id="img3"
@@ -126,6 +129,13 @@
     </footer>
     </div>
 </body>
+<script>
+    function toggleMenu() {
+        document.querySelector(".menu").classList.toggle("show");
+    }
+
+
+</script>
 <script>
     window.addEventListener("scroll", function () {
         let div = document.querySelector(".c-menu");

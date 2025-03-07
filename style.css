@@ -2,10 +2,11 @@
 
 
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
 body {
@@ -16,6 +17,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 
 .contenido {
     width: 100%;
@@ -30,9 +32,6 @@ li {
 
 }
 
-.abrir-m {
-    display: none;
-}
 
 
 .c-menu {
@@ -58,27 +57,7 @@ li {
 
 }
 
-@media (max-width: 500px) {
 
-    /*
-    .abrir-m{
-        display: block;
-        z-index: 100;
-        position: fixed;
-    }
-    .c-menu, .scrolled{
-        display: none;
-    }
-        */
-    .c-menu {
-        background-color: red;
-        width: 80%;
-        height: 100vh;
-        right: 0;
-    }
-
-
-}
 
 .scrolled {
     background-color: rgba(0, 0, 0, 0.651);
@@ -259,19 +238,28 @@ button:hover {
     object-fit: cover;
     border-radius: 4px;
 }
-
-@media (max-width: 500px) {
+@media (max-width:  540px) {
     .item {
-        margin: 10px;
+        margin: 5px;
+    }
+    h1{
+        padding: 15px;
     }
 
 }
-
-@media (max-width: 300px) {
+@media (max-width: 410px) {
     :root {
+        --tama-ño: 170px;
+        --tama-ño-v: 270px;
+    }
+:root {
         --tama-ño: 130px;
         --tama-ño-v: 200px;
     }
+}
+
+@media (max-width: 300px) {
+    
 
 }
 
@@ -416,6 +404,26 @@ h5 {
     transition: background-color 0.9s ease;
     margin-bottom: 15px;
 }
+.apk-1 {
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+    transition: 5;
+    border: 0px solid #fff;
+
+    transition: background-color 0.9s ease;
+    margin-bottom: 15px;
+}
+.apk-1 .i-2{
+    
+}
+.apk-1:hover{
+background-color: transparent;
+    color: #fff;
+}
+
 
 .apk:hover {
     border: 1px solid #fff;
@@ -433,10 +441,7 @@ h5 {
     margin-left: 0px;
 }
 
-a {
-    text-decoration: none;
-    color: none;
-}
+
 
 html {
     scroll-behavior: smooth;
@@ -479,4 +484,128 @@ html {
 .iiii {
     font-size: 20px;
     color: rgb(255, 255, 255);
+}
+
+
+.div-g{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+}
+
+.logo-img {
+    width: 50px;
+    margin-left: 10px;
+
+    border-radius: 5px;
+}
+.l-4{
+    width: 80%;
+    height: 1px;
+    background: rgb(255, 255, 255);
+}
+/* 🔹 Estilos del menú principal */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    color: white;
+    cursor: pointer;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+@media (min-width: 501px) {
+    .abrir-m {
+        display: none;
+    }
+
+    .cerrar-m {
+        display: none;
+    }
+
+    .logo-img {
+        display: none;
+    }
+    .div-g{
+        display: none;
+    }
+    .l-4{
+        display: none;
+        
+    }
+    h2{
+        display: none;
+    }
+}
+
+
+/* 🔹 Estilos para pantallas pequeñas (menú lateral derecho) */
+@media (max-width: 500px) {
+    .scrolled {
+        background: none;
+    }
+    .menu {
+        flex-direction: column;
+        border: none;
+        position: fixed;
+        top: 0;
+        right: -550px;
+        /* Oculto fuera de la pantalla */
+        width: 80%;
+        height: 100vh;
+        background: #0a0a0a;
+        transition: right 0.3s ease-in-out;
+        padding: 50px 0px;
+    }
+
+    .c-menu {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+
+
+    .menu.show {
+        right: 0;
+        /* Muestra el menú */
+    }
+
+    .menu li {
+        padding: 15px;
+        text-align: center;
+    }
+
+    /* 🔹 Botón para abrir */
+    .abrir-m {
+        position: fixed;
+        right: 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        margin: 0px;
+    }
+    .abrir-m:hover{
+        background-color: rgba(255, 0, 0, 0);
+
+    }
+
+    /* 🔹 Botón para cerrar */
+    .cerrar-m {
+        display: block;
+        background: rgba(255, 0, 0, 0);
+        color: white;
+        text-align: center;
+        cursor: pointer;
+        font-weight: bold;
+    }
 }
