@@ -242,24 +242,22 @@ button:hover {
 @media (max-width: 540px) {
     .item {
         margin: 5px;
-    }
-
+    border: 1px solid red;   
+ }
+ :root {
+    --tama-ño: 180px;
+    --tama-ño-v: 300px;
+}
     h1 {
         padding: 15px;
     }
-
 }
 
 @media (max-width: 410px) {
-    :root {
-        --tama-ño: 170px;
-        --tama-ño-v: 270px;
-    }
+    .item {
+        margin: 5px;
+    border: 1px solid rgb(38, 0, 255);    }
 
-    :root {
-        --tama-ño: 130px;
-        --tama-ño-v: 200px;
-    }
 }
 
 @media (max-width: 300px) {}
