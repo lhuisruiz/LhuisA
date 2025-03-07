@@ -26,7 +26,7 @@ function contacto() {
 			'  <h1> contacto</h1>' +
 			'   <div class="L-2"></div>' +
 			'   <div class="c-r">' +
-			'     <a href="http://wa.me/54114482987" target="_blank">' +
+			'     <a href="http://wa.me/541144382987" target="_blank">' +
 			'         <div class="c-r-2">' +
 			'             <i class="fa-brands fa-whatsapp fa-fade i"></i>' +
 			'             <h5>Whatsapp</h5>' +
