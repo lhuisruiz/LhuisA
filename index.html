@@ -41,88 +41,90 @@
 </head>
 
 <body>
-    <div class="slideshow-container">
-        <img class="slide" src="img/1 - copia.jpg" alt="Imagen 1">
-        <img class="slide" src="img/c.jpg" alt="Imagen 2">
-        <img class="slide" src="img/b.jpg" alt="Imagen 3">
-        <img class="slide" src="img/d.jpg" alt="Imagen 4">
-        <img class="slide" src="img/7.jpg" alt="Imagen 5">
+    <div class="contenido">  
+                <button class="abrir-m">abir</button>
+        <div class="slideshow-container" id="inicio">
+            
+            <img class="slide" src="img/1 - copia.jpg" alt="Imagen 1">
+            <img class="slide" src="img/c.jpg" alt="Imagen 2">
+            <img class="slide" src="img/b.jpg" alt="Imagen 3">
+            <img class="slide" src="img/d.jpg" alt="Imagen 4">
+            <img class="slide" src="img/7.jpg" alt="Imagen 5">
+            <div class="c-menu">
+         
+                <div class="menu">
+                 
+                    <li><a class="E" href="#inicio">Inicio</a> </li>
+                    <li><a class="E" href="#Galeria">Galeria</a> </li>
+                    <li><a class="E" href="#SobreMi">Sobre Mi</a> </li>
+                    <li onclick="qr();">Qr </li>
 
-        <div class="c-menu">
-            <div class="menu">
-                <li><a class="E" href="#inicio">Inicio</a> </li>
-                <li><a class="E" href="#Galeria">Galeria</a> </li>
-                <li><a class="E" href="#SobreMi">Sobre Mi</a> </li>
-                <li onclick="qr();">Qr </li>
-                <a href="https://lhuisruiz.github.io/play/">
-                    <li>Play</li>
-                    <li><a class="E" href="http://action_notifications">Notificaciones</li>
-                </a>
-                </li>
+                    <a href="https://lhuisruiz.github.io/play/">
+                        <li>Play</li>
+                        <li><a class="E" href="http://action_notifications">Notificaciones</li>
+                    </a>
+                    </li>
 
-                </a>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="c-datos">
 
-            <div class="info-c">
-                <h1>HOLA SOY <span class="typed"></span> </h1>
-                <!---  <div class="L-"></div>
+            <div class="c-datos">
+
+                <div class="info-c">
+                    <h1>HOLA SOY <span class="typed"></span> </h1>
+                    <!---  <div class="L-"></div>
      
-        <p>Fotografo por diversión, No te compliques la
+            <p>Fotografo por diversión, No te compliques la
             vida, Quererse a uno mismo es el principio de un
             romance para toda la vida. </p>-->
-                <button onclick="contacto();">Hablamos</button>
+                    <button onclick="contacto();">Hablamos</button>
+                </div>
+
             </div>
 
         </div>
+        
+        <div class="galeria" id="Galeria">
+            <div class="d-g">
+                <h3>Mis Trabajos</h3>
+            </div>
 
-    </div>
-    <div class="galeria" id="Galeria">
-        <div class="d-g">
-            <h3>Mis Trabajos</h3>
+            <a href="15.html">
+                <div class="item">
+                    <img class="item-img" id="img2" src="https://lhuisruiz.github.io/15/img/f%20(12).jpg" alt="">
+                    <button class="ver-bt">15</button>
+                </div>
+            </a>
+
+            <a href="bodas.html">
+                <div class="item">
+                    <img class="item-img" id="img3"
+                        src="https://lh3.googleusercontent.com/pw/AP1GczP36M25okeefhdCxMMSe0I6znFCsI3pHad3BuEp6u37dAG512hh9tTzJ1N1HDJQ20HDCDaSyibVh31JXiHr9lTCOBJbRNu6axu_uMkBDLejdcjdCh6EFTp72U_7mfb8ZUogBcQKmK7zmLFpUKXhnIE=w428-h642-s-no-gm?authuser=0"
+                        alt="">
+                    <button class="ver-bt">bodas</button>
+                </div>
+            </a>
+
+
+
+
+
+            <a href="retratos.html">
+                <div class="item">
+                    <img class="item-img" id="img1"
+                        src=https://lh3.googleusercontent.com/pw/AP1GczPFea-caAInpQmWjk60v5xEgVTE7UVznp12CMY8SgbzNw-oosA5iCAkRhWFb8JUX-GrnWunfq8ZsBi-ZFpNH0mOkA4Q_LMQTM3bbADKnJf5RdedPGGD8mklujajFlnFVY02qDAQC8G9i0s2XYCzW1g=w423-h634-s-no-gm?authuser=0"
+                        alt="">
+                    <button o class="ver-bt">Retratos</button>
+                </div>
+            </a>
         </div>
-
-        <a href="15.html">
-            <div class="item">
-                <img class="item-img" id="img2" src="https://lhuisruiz.github.io/15/img/f%20(12).jpg" alt="">
-                <button class="ver-bt">15</button>
-            </div>
-        </a>
-
-        <a href="bodas.html">
-            <div class="item">
-                <img class="item-img" id="img3"
-                    src="https://lh3.googleusercontent.com/pw/AP1GczP36M25okeefhdCxMMSe0I6znFCsI3pHad3BuEp6u37dAG512hh9tTzJ1N1HDJQ20HDCDaSyibVh31JXiHr9lTCOBJbRNu6axu_uMkBDLejdcjdCh6EFTp72U_7mfb8ZUogBcQKmK7zmLFpUKXhnIE=w428-h642-s-no-gm?authuser=0"
-                    alt="">
-                <button class="ver-bt">bodas</button>
-            </div>
-        </a>
-
-
-
-
-
-        <a href="retratos.html">
-            <div class="item">
-                <img class="item-img" id="img1"
-                    src=https://lh3.googleusercontent.com/pw/AP1GczPFea-caAInpQmWjk60v5xEgVTE7UVznp12CMY8SgbzNw-oosA5iCAkRhWFb8JUX-GrnWunfq8ZsBi-ZFpNH0mOkA4Q_LMQTM3bbADKnJf5RdedPGGD8mklujajFlnFVY02qDAQC8G9i0s2XYCzW1g=w423-h634-s-no-gm?authuser=0"
-                    alt="">
-                <button o class="ver-bt">Retratos</button>
-            </div>
-        </a>
-    </div>
-    <div>
-
     </div>
 
-    </div>
-    <!--
-    <div class="s-m">
-    </div>-->
     <footer id="SobreMi">
-        @lhuis ruiz
+        <h4>Creado Por @lhuis ruiz</h4>
     </footer>
+    </div>
 </body>
 <script>
     window.addEventListener("scroll", function () {
@@ -148,7 +150,7 @@
             indexSlide = (indexSlide + 1) % slides.length;
         }
         changeSlide();
-        setInterval(changeSlide, 399000);
+        setInterval(changeSlide, 3000);
 
         // GALERÍA
         const imagenes = [

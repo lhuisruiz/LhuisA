@@ -23,47 +23,47 @@ const typed = new Typed('.typed', {
 function contacto() {
 	Swal.fire({
 		html: '<div class="contacto">' +
-          '  <h1> contacto</h1>' +
-         '   <div class="L-2"></div>' +
-         '   <div class="c-r">' +
-           '     <a href="http://wa.me/54114482987" target="_blank">' +
-           '         <div class="c-r-2">' +
-           '             <i class="fa-brands fa-whatsapp fa-fade i"></i>' +
-           '             <h5>Whatsapp</h5>' +
-          '          </div></a >' +
-		  '      <a href="https://www.instagram.com/lhuisruiz/" target="_blank">' +
-		  '           <div class="c-r-2">' +
-		  '               <i class="fa-brands fa-instagram fa-fade i"></i>' +
-		  '               <h5>@lhuisruiz</h5>' +
-		  '          </div>' +
-		  '     </a>' +
-		  '      <a href="https://www.instagram.com/ruizlhuis/" target="_blank">' +
-		  '           <div class="c-r-2">' +
-		  '               <i class="fa-brands fa-instagram fa-fade i"></i>' +
-		  '               <h5>@ruizlhuis</h5>' +
-		  '          </div>' +
-		  '     </a>' +
-		'      <a href="https://www.facebook.com/lhuisruiz/" target="_blank">' +
-		'           <div class="c-r-2">' +
-		'               <i class="fa-brands fa-facebook fa-fade i"></i>' +
-		'               <h5>lhuis ruiz</h5>' +
-		'          </div>' +
-		'     </a>' +
-		'      <a href="https://www.tiktok.com/@lhuisruiz" target="_blank">' +
-		'          <div class="c-r-2">' +
-		'            <i class="fa-brands fa-tiktok fa-fade i"></i>' +
-		'                <h5>tiktok</h5>' +
-        '            </div>' +
-		'        </a>' +
-		'    </div>' +
-		'    <div class="L-3"></div>' +
-		'    <a href="https://play.google.com/store/apps/details?id=lhuis.appipu&pcampaignid=web_share"' +
-		'        target="_blank"><button class="apk">Desccargar App <i' +
-		'                 class="fa-brands fa-google-play fa-bounce i-2"></i> </button></a>' +
-	'	<div class="L-3"></div>' +
-		'    <a href="http://action_share"' +
-		'        ><button class="apk"></i>share </button></a>' +
-		' </div>',
+			'  <h1> contacto</h1>' +
+			'   <div class="L-2"></div>' +
+			'   <div class="c-r">' +
+			'     <a href="http://wa.me/54114482987" target="_blank">' +
+			'         <div class="c-r-2">' +
+			'             <i class="fa-brands fa-whatsapp fa-fade i"></i>' +
+			'             <h5>Whatsapp</h5>' +
+			'          </div></a >' +
+			'      <a href="https://www.instagram.com/lhuisruiz/" target="_blank">' +
+			'           <div class="c-r-2">' +
+			'               <i class="fa-brands fa-instagram fa-fade i"></i>' +
+			'               <h5>@lhuisruiz</h5>' +
+			'          </div>' +
+			'     </a>' +
+			'      <a href="https://www.instagram.com/ruizlhuis/" target="_blank">' +
+			'           <div class="c-r-2">' +
+			'               <i class="fa-brands fa-instagram fa-fade i"></i>' +
+			'               <h5>@ruizlhuis</h5>' +
+			'          </div>' +
+			'     </a>' +
+			'      <a href="https://www.facebook.com/lhuisruiz/" target="_blank">' +
+			'           <div class="c-r-2">' +
+			'               <i class="fa-brands fa-facebook fa-fade i"></i>' +
+			'               <h5>lhuis ruiz</h5>' +
+			'          </div>' +
+			'     </a>' +
+			'      <a href="https://www.tiktok.com/@lhuisruiz" target="_blank">' +
+			'          <div class="c-r-2">' +
+			'            <i class="fa-brands fa-tiktok fa-fade i"></i>' +
+			'                <h5>tiktok</h5>' +
+			'            </div>' +
+			'        </a>' +
+			'    </div>' +
+			'    <div class="L-3"></div>' +
+			'    <a href="https://play.google.com/store/apps/details?id=lhuis.appipu&pcampaignid=web_share"' +
+			'        target="_blank"><button class="apk">Desccargar App <i' +
+			'                 class="fa-brands fa-google-play fa-bounce i-2"></i> </button></a>' +
+			'	<div class="L-3"></div>' +
+			'    <a href="http://action_share"' +
+			'        ><button class="apk">share <i class="fa-solid fa-share-nodes i-2"></i></button></a>' +
+			' </div>',
 		//tamaño
 		imageWidth: 300,
 		imageHeight: 300,
