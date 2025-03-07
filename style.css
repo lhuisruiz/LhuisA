@@ -242,25 +242,30 @@ button:hover {
 @media (max-width: 540px) {
     .item {
         margin: 5px;
-    border: 1px solid red;   
- }
- :root {
-    --tama-ño: 180px;
-    --tama-ño-v: 300px;
-}
+    }
+
+    :root {
+        --tama-ño: 180px;
+        --tama-ño-v: 300px;
+    }
+
     h1 {
         padding: 15px;
     }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 300px) {
     .item {
         margin: 5px;
-    border: 1px solid rgb(38, 0, 255);    }
+    }
+
+    :root {
+        --tama-ño: 140px;
+        --tama-ño-v: 200px;
+    }
 
 }
 
-@media (max-width: 300px) {}
 
 .ver-bt {
     width: 100px;
@@ -417,7 +422,6 @@ h5 {
     margin-bottom: 15px;
 }
 
-.apk-1 .i-2 {}
 
 .apk-1:hover {
     background-color: transparent;
@@ -528,6 +532,9 @@ html {
 }
 
 @media (min-width: 501px) {
+    .L-, p{
+        display: none;
+    }
     .abrir-m {
         display: none;
     }
