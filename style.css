@@ -588,7 +588,7 @@ html {
     /* 🔹 Botón para abrir */
     .abrir-m {
         position: fixed;
-        right: 20px;
+        right: -2px;
         border: none;
         cursor: pointer;
         font-size: 18px;
