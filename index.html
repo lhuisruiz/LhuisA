@@ -67,6 +67,9 @@
                     <li><a class="E" onclick="toggleMenu()" href="#inicio">Inicio</a> </li>
                     <li><a class="E" onclick="toggleMenu()" href="#Galeria">Galeria</a> </li>
                     <li><a class="E" onclick="toggleMenu()" href="#SobreMi">Sobre Mi</a> </li>
+                    <div onclick="contacto();" class="cont">
+                        <li><a class="E" onclick="toggleMenu()">Contacto</a> </li>
+                    </div>
                     <li onclick="qr();">Qr </li>
                     <a href="https://lhuisruiz.github.io/play/">
                         <li>Play</li>
@@ -116,7 +119,7 @@
             <a href="retratos.html">
                 <div class="item">
                     <img class="item-img" id="img1"
-                        src=https://lh3.googleusercontent.com/pw/AP1GczPFea-caAInpQmWjk60v5xEgVTE7UVznp12CMY8SgbzNw-oosA5iCAkRhWFb8JUX-GrnWunfq8ZsBi-ZFpNH0mOkA4Q_LMQTM3bbADKnJf5RdedPGGD8mklujajFlnFVY02qDAQC8G9i0s2XYCzW1g=w423-h634-s-no-gm?authuser=0"
+                        src="https://lh3.googleusercontent.com/pw/AP1GczPCRIYp4L56JH36AqmmLJj5YPiqegOVUUcqGlHp9fIAkLeVLCCH85QS8GtTa32UuAFxgTSZGDvjaba7Qz-wDU_8kXaIYBIb1xwqRsiI8eFph-q9NbCltuNSerH8RdEeNfpxe3P53TGo8S5uNDEYGyc=w423-h634-s-no-gm?authuser=0"
                         alt="">
                     <button o class="ver-bt">Retratos</button>
                 </div>
@@ -164,11 +167,13 @@
 
         // GALERÍA
         const imagenes = [
-            "https://lh3.googleusercontent.com/pw/AP1GczM0cNSF0qu2AcxogFQPi3VO2ROOvW49Yg2NDpynh4crvoPNcDyQZlDUhpYXwZWWfi2yQF69oJqqhJl4lYTp2klO3b9Tnrfj2F8ApOwzSu4xXzU06mvTVTQCCOjb169cBjmyHebyP3Pv6AWrdSTrVw=w428-h642-s-no-gm?authuser=2",
-            "https://lh3.googleusercontent.com/pw/AP1GczOT6u0F5mALdOlNvoaDUi4vGC4TXMIFtUqcEXOy-jWM2ZmnqQ9WfnRHm1HAYsQMzM9xTR5uWQ-VtnzBfcszXzl_XUiq9oTsxTdmE2yIkRHIE8Cf9ZSuOcRhcFGkaV7ZUa9VZndUNBgBTEQVcmUhbjA=w428-h642-s-no-gm?authuser=5"
+            "https://lh3.googleusercontent.com/pw/AP1GczMvuO-XGzhVM1CjUm8SOZI5IvO0U1c2MmWS2SJlj1GFSyRsAgV6oeMQRY5Zn4WvrLAkbeLtZheSte0g2dVfua4MWWW9OZk9facBYa6gMIo6tLwx2TmbXgA6fU1wnND-nTeF7EYpw06NZUAXW7rgqqY=w423-h634-s-no-gm?authuser=0",
+            "https://lh3.googleusercontent.com/pw/AP1GczOT6u0F5mALdOlNvoaDUi4vGC4TXMIFtUqcEXOy-jWM2ZmnqQ9WfnRHm1HAYsQMzM9xTR5uWQ-VtnzBfcszXzl_XUiq9oTsxTdmE2yIkRHIE8Cf9ZSuOcRhcFGkaV7ZUa9VZndUNBgBTEQVcmUhbjA=w428-h642-s-no-gm?authuser=5",
+            "https://lh3.googleusercontent.com/pw/AP1GczP5J8_HbvLBL_ABCVadXc-v7ChbSmVPLVrbAzKN8JHBGJYQAjSirtFRXHHI_QlCCvPiB5niZYLyG7d9pmZ5AAU9VOb0ys1gJZ65frxQZVpGMB8aS5jU3e-94HAxgdmDQm2V1AmEsBsjZvJPRw3NqfY=w423-h634-s-no-gm?authuser=0"
         ];
 
         const imagenes2 = [
+            "https://lh3.googleusercontent.com/pw/AP1GczO68U1PMaHGwO2kXPMOPbEykz6wiUewJ7taMqFty33LVlE8m3uy2JU8niD78orWo_sIxlEqS8UdgSRiJMT31E50zShOMIMpv_9WiTcQWleKtByjn-cLHsLAwLMZ2aqwaqscQJ9yv4aBtosPAF3lG32o=w481-h642-s-no-gm?authuser=0",
             "https://lh3.googleusercontent.com/pw/AP1GczO68U1PMaHGwO2kXPMOPbEykz6wiUewJ7taMqFty33LVlE8m3uy2JU8niD78orWo_sIxlEqS8UdgSRiJMT31E50zShOMIMpv_9WiTcQWleKtByjn-cLHsLAwLMZ2aqwaqscQJ9yv4aBtosPAF3lG32o=w481-h642-s-no-gm?authuser=0",
             "https://lhuisruiz.github.io/15/img/f%20(12).jpg"
         ];
@@ -182,10 +187,10 @@
             indexGallery = (indexGallery + 1) % imagenes.length;
             document.getElementById("img1").src = imagenes[indexGallery];
             document.getElementById("img2").src = imagenes2[indexGallery];
-            document.getElementById("img2").src = imagenes2[indexGallery]
+            document.getElementById("img3").src = imagenes3[indexGallery]
         }
 
-        setInterval(cambiarImagenes, 1000);
+        setInterval(cambiarImagenes, 9000);
     };
 
 </script>
@@ -195,9 +200,12 @@
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 <script src="main.js"></script>
 
+<!-- icono awesome-->
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <script src="ap.js"></script>
 
 

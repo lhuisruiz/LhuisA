@@ -253,6 +253,17 @@ button:hover {
         padding: 15px;
     }
 }
+@media (max-width: 360px) {
+    .item {
+        margin: 2px;
+    }
+
+    :root {
+        --tama-ño: 175px;
+        --tama-ño-v: 250px;
+    }
+
+}
 
 @media (max-width: 300px) {
     .item {
@@ -534,6 +545,9 @@ html {
 @media (min-width: 501px) {
     .L-, p{
         display: none;
+    }
+    .cont{
+display: none;
     }
     .abrir-m {
         display: none;
