@@ -600,7 +600,7 @@ html {
 .menu {
     list-style: none;
     display: flex;
-    gap: 20px;
+    
 }
 
 .menu li {
@@ -611,6 +611,9 @@ html {
 .menu a {
     text-decoration: none;
     color: white;
+}
+.x-x{
+    color: red;
 }
 
 @media (min-width: 601px) {
@@ -664,9 +667,9 @@ html {
         top: 0;
         right: -550px;
         /* Oculto fuera de la pantalla */
-        width: 80%;
-        height: 100vh;
-        background: #0a0a0a;
+        width: 90%;
+        height: 90%;
+        background: #000000f8;
         transition: right 0.3s ease-in-out;
         padding: 50px 0px;
     }
