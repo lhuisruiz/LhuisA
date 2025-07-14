@@ -42,76 +42,93 @@
 <meta name="robots" content="noindex">
 
 </head>
+
 <style>
 
-</style>
+
+    .slideshow-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .slide.active {
+        opacity: 1;
+        z-index: 1;
+    }
 </style>
 
 <body>
     <div class="contenido">
-        <div class="slideshow-container" id="inicio">
-            <img class="slide" src="https://res.cloudinary.com/dslvhklx8/image/upload/v1752517764/IMG-20241213-WA0058_rbtt3f.jpg" alt="Imagen 8">
-            <img class="slide" src="img/a (6).jpg" alt="Imagen 2">
-            <img class="slide" src="img/a (3).jpg" alt="Imagen 3">
-            <img class="slide" src="img/a (4).jpg" alt="Imagen 4">
-            <img class="slide" src="img/a (5).jpg" alt="Imagen 5">
-            <img class="slide" src="img/a (2).jpg" alt="Imagen 6">
+        <div class="slideshow-container" id="slider"></div>
 
 
-            <div class="c-menu">
-                <button class="abrir-m" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
-                <img class="logo-img" onclick="contacto();"
-                    src="https://res.cloudinary.com/fotoqe123/image/upload/v1720052795/ABAUT/logo-modified_co2oj7_uaw1ee.ico"
-                    alt="">
-                <div class="menu">
-                    <div class="div-g">
-                        <li class="cerrar-m" onclick="toggleMenu()"><span class="x-x"> ✖</span></li>
-                        <a href="http://action_notifications">
-                            <li><i class="fa-solid fa-bell i"></i></li>
-                        </a>
-                    </div>
-                    <h2>LHUIS RUIZ</h2>
-                    <div class="l-4"></div>
-                    <li><a class="E" onclick="toggleMenu()" href="#inicio">In</a> </li>
-                    <li><a class="E" onclick="toggleMenu()" href="#Galeria">Galeria</a> </li>
-                    <li><a class="E" onclick="toggleMenu()" href="#SobreMi">Sobre Mi</a> </li>
-                    <div onclick="contacto();" class="cont">
-                        <li><a class="E" onclick="toggleMenu()">Contacto</a> </li>
-                    </div>
-                    <li onclick="qr();">Qr </li>
-                    <a href="https://lhuisruiz.github.io/play/">
-                        <li>Play</li>
-                    </a>
-                    <div class="l-4"></div>
-                    </li>
-
+        <div class="c-menu">
+            <button class="abrir-m" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+            <img class="logo-img" onclick="contacto();"
+                src="https://res.cloudinary.com/fotoqe123/image/upload/v1720052795/ABAUT/logo-modified_co2oj7_uaw1ee.ico"
+                alt="">
+            <div class="menu">
+                <div class="div-g">
+                    <li class="cerrar-m" onclick="toggleMenu()"><span class="x-x"> ✖</span></li>
+                    <a href="http://action_notifications">
+                        <li><i class="fa-solid fa-bell i"></i></li>
                     </a>
                 </div>
-            </div>
-
-            <div class="c-datos">
-
-                <div class="info-c">
-                    <h1>HOLA SOY <span class="typed"></span> </h1>
-                    <div class="L-"></div>
-
-                    <p>Fotografo por diversión, No te compliques la
-                        vida, Quererse a uno mismo es el principio de un
-                        romance para toda la vida. </p>
-                    <button onclick="contacto();">Hablamos</button>
+                <h2>LHUIS RUIZ</h2>
+                <div class="l-4"></div>
+                <li><a class="E" onclick="toggleMenu()" href="#inicio">Inicio</a> </li>
+                <li><a class="E" onclick="toggleMenu()" href="#Galeria">Galeria</a> </li>
+                <li><a class="E" onclick="toggleMenu()" href="#SobreMi">Sobre Mi</a> </li>
+                <div onclick="contacto();" class="cont">
+                    <li><a class="E" onclick="toggleMenu()">Contacto</a> </li>
                 </div>
+                <li onclick="qr();">Qr </li>
+                <a href="https://lhuisruiz.github.io/play/">
+                    <li>Play</li>
+                </a>
+                <div class="l-4"></div>
+                </li>
 
+                </a>
             </div>
         </div>
-        <div class="galeria" id="Galeria">
-            <div class="d-g">
-                <h3>Mis Trabajos</h3>
+
+        <div class="c-datos">
+
+            <div class="info-c">
+                <h1>HOLA SOY <span class="typed"></span> </h1>
+                <div class="L-"></div>
+
+                <p>Fotografo por diversión, No te compliques la
+                    vida, Quererse a uno mismo es el principio de un
+                    romance para toda la vida. </p>
+                <button onclick="contacto();">Hablamos</button>
             </div>
 
+        </div>
+    </div>
+    <div class="galeria" id="Galeria">
+        <div class="d-g">
+            <h3>Mis Trabajos</h3>
+        </div>
 
 
 
-            <!---
+
+        <!---
             <a href="bodas.html">
                 <div class="item">
                     <img class="item-img" id="img3"
@@ -122,24 +139,17 @@
             </a>
             -->
 
-            <a href="retratos.html">
-                <div class="item" id="item1"><button class="ver-bt">Retatos Natural</button></div>
-            </a>
-            <a href="15.html">
-                <div class="item" id="item2"><button class="ver-bt">15 Años</button></div>
-            </a>
-            <a href="bodas.html">
-                <div class="item" id="item3"><button class="ver-bt">Bodas</button></div>
-            </a>
+        <a href="retratos.html">
+            <div class="item" id="item1"><button class="ver-bt">Retatos Natural</button></div>
+        </a>
+        <a href="15.html">
+            <div class="item" id="item2"><button class="ver-bt">15 Años</button></div>
+        </a>
+        <a href="bodas.html">
+            <div class="item" id="item3"><button class="ver-bt">Bodas</button></div>
+        </a>
 
-
-
-
-
-
-
-
-        </div>
+    </div>
     </div>
     <div class="container">
 
@@ -173,24 +183,67 @@
 
 </script>
 <script>
+    const slider = document.getElementById("slider");
 
-    window.onload = function () {
-        // SLIDESHOW
-        let slides = document.querySelectorAll(".slide");
-        let indexSlide = 0;
+    const desktopImages = [
+        "img/h/h (1).jpg",
+        "img/h/h (2).jpg",
+        "img/h/h (3).jpg",
+        "img/h/h (4).jpg",
+        "img/h/h (5).jpg",
+        "img/h/h (6).jpg",
 
-        function changeSlide() {
-            slides.forEach(slide => slide.classList.remove("active"));
-            slides[indexSlide].classList.add("active");
-            indexSlide = (indexSlide + 1) % slides.length;
-        }
-        changeSlide();
-        setInterval(changeSlide, 2000);
+    ];
 
+    const mobileImages = [
+        "img/v/v (3).jpg",
+        "img/v/v (2).jpg",
+    ];
 
+    let currentSlide = 0;
+    let slides = [];
 
+    function isMobile() {
+        return window.innerWidth <= 500;
+    }
+
+    function loadSlides() {
+        const images = isMobile() ? mobileImages : desktopImages;
+        slider.innerHTML = ""; // limpia todo
+
+        images.forEach((src, i) => {
+            const img = document.createElement("img");
+            img.src = src;
+            img.className = "slide";
+            if (i === 0) img.classList.add("active");
+            slider.appendChild(img);
+        });
+
+        slides = document.querySelectorAll(".slide");
+    }
+
+    function changeSlide() {
+        if (!slides.length) return;
+
+        slides[currentSlide].classList.remove("active");
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add("active");
+    }
+
+    window.onload = () => {
+        loadSlides();
+        setInterval(changeSlide, 13000);
     };
 
+    window.addEventListener("resize", () => {
+        const wasMobile = slides[0]?.src.includes("mobile");
+        const nowMobile = isMobile();
+
+        if (wasMobile !== nowMobile) {
+            currentSlide = 0;
+            loadSlides();
+        }
+    });
 </script>
 
 

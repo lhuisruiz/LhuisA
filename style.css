@@ -7,6 +7,7 @@
     item-sizing: border-item;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
+    border: 0px solid red;
 }
 
 body {
@@ -102,16 +103,23 @@ li {
 
 .c-datos {
     width: 100%;
-    height: auto;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(66, 219, 5, 0);
+    z-index: ;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .info-c {
-    width: auto;
+   width: auto;
     height: auto;
-    display: flex;
+    display: flex
+;
     align-items: center;
     position: absolute;
     z-index: 4;
@@ -363,8 +371,8 @@ button:hover {
     position: absolute;
     width: 100%;
     height: 100%;
+
     object-fit: cover;
-    opacity: 0;
     transition: opacity 1s ease-in-out;
 }
 
@@ -385,7 +393,8 @@ button:hover {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.61);
+    background: rgba(0, 0, 0, 0.377);
+    z-index: 1;
 }
 
 footer {
