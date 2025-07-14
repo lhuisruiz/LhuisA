@@ -63,7 +63,7 @@ function contacto() {
 			//'    <a href="https://play.google.com/store/apps/details?id=lhuis.appipu&pcampaignid=web_share"' +
 			//'        target="_blank"><button class="apk">Desccargar App <i' +
 			//'                 class="fa-brands fa-google-play fa-bounce i-2"></i> </button></a>' +
-			
+
 			//compatir app
 			'	<div class="L-3"></div>' +
 			'    <a href="http://action_share"' +
