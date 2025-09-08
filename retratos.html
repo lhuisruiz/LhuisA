@@ -2,25 +2,25 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 
-    <meta name="theme-color" content="black">
+  <meta name="theme-color" content="black">
 </head>
 <script>
 
-    // Precargar imágenes
-    const precargadas = fondos.map(url => {
-        const img = new Image();
-        img.src = url;
-        return img;
-    });
+  // Precargar imágenes
+  const precargadas = fondos.map(url => {
+    const img = new Image();
+    img.src = url;
+    return img;
+  });
 </script>
 
 <title>lhuis</title>
 <link rel="icon" type="image/x-icon"
-    href="https://res.cloudinary.com/fotoqe123/image/upload/v1720052795/ABAUT/logo-modified_co2oj7_uaw1ee.ico">
+  href="https://res.cloudinary.com/fotoqe123/image/upload/v1720052795/ABAUT/logo-modified_co2oj7_uaw1ee.ico">
 <link rel="canonical" href="https://bit.ly/lhuisruiz">
 <meta property="og:site_name" content="lhuis">
 <meta property="og:title" content="lhuis">
@@ -28,245 +28,517 @@
 <meta property="og:type" content="website">
 <meta property="og:ttl" content="864000">
 <meta property="og:description"
-    content="Hola soy lhuis, Fotografo por diversión, Quererse a uno mismo es el principio de un romance para toda la vida. 🖤">
+  content="Hola soy lhuis, Fotografo por diversión, Quererse a uno mismo es el principio de un romance para toda la vida. 🖤">
 <meta property="og:image"
-    content="https://res.cloudinary.com/fotoqe123/image/upload/v1720055296/ABAUT/social-pixieset-v3-r_ci9v6c.jpg">
+  content="https://res.cloudinary.com/fotoqe123/image/upload/v1720055296/ABAUT/social-pixieset-v3-r_ci9v6c.jpg">
 <meta property="og:image:width" content="345">
 <meta property="og:image:height" content="518">
 <meta itemprop="name" content="lhuis">
 <meta itemprop="url" content="https://bit.ly/lhuisruiz">
 <meta itemprop="description"
-    content="Hola soy lhuis, Fotografo por diversión, Quererse a uno mismo es el principio de un romance para toda la vida. 🖤">
+  content="Hola soy lhuis, Fotografo por diversión, Quererse a uno mismo es el principio de un romance para toda la vida. 🖤">
 <meta itemprop="thumbnailUrl"
-    content="https://res.cloudinary.com/fotoqe123/image/upload/v1720055296/ABAUT/social-pixieset-v3-r_ci9v6c.jpg">
+  content="https://res.cloudinary.com/fotoqe123/image/upload/v1720055296/ABAUT/social-pixieset-v3-r_ci9v6c.jpg">
 <meta name="twitter:title" content="lhuis">
 <meta name="twitter:image"
-    content="https://res.cloudinary.com/fotoqe123/image/upload/v1720055296/ABAUT/social-pixieset-v3-r_ci9v6c.jpg">
+  content="https://res.cloudinary.com/fotoqe123/image/upload/v1720055296/ABAUT/social-pixieset-v3-r_ci9v6c.jpg">
 <meta name="twitter:url" content="https://bit.ly/lhuisruiz">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:description"
-    content="Hola soy lhuis, Fotografo por diversión, Quererse a uno mismo es el principio de un romance para toda la vida. 🖤">
+  content="Hola soy lhuis, Fotografo por diversión, Quererse a uno mismo es el principio de un romance para toda la vida. 🖤">
 <meta name="description"
-    content="Hola soy lhuis, Fotografo por diversión, Quererse a uno mismo es el principio de un romance para toda la vida. 🖤">
+  content="Hola soy lhuis, Fotografo por diversión, Quererse a uno mismo es el principio de un romance para toda la vida. 🖤">
 <meta name="robots" content="noindex">
 
 
 </head>
 <style>
-    .ver-bt {
-        text-shadow: 1px 1px 4px rgbrgb(0, 0, 0)
+  :root {
+    --bg: #000000;
+    --card: #000000;
+    --muted: #ffffff;
+    --text: #000000;
+    --primary: #18a653;
+    --primary-pressed: #30a618;
+  }
+
+  * {
+    box-sizing: border-box
+  }
+
+
+
+  
+  .ver-bt {
+    text-shadow: 1px 1px 4px rgbrgb(0, 0, 0)
+  }
+
+  .ver-bt:hover {
+    text-shadow: none;
+  }
+
+
+  .div {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* Contenedor que mantiene la imagen y las flechas */
+  .wrapper {
+    position: relative;
+    /* referencia para las flechas */
+    width: 100%;
+    overflow: hidden;
+    /* oculta lo que se desborda */
+  }
+
+  .contenedor {
+    width: 100%;
+    overflow-x: auto;
+    /* desplazamiento horizontal */
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: none;
+    /* oculta en Firefox */
+  }
+
+  .contenedor::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* oculta barra en Chrome/Edge/Safari */
+
+  .contenedor img {
+    height: 500px;
+    width: auto;
+    display: block;
+    user-select: none;
+  }
+
+  /* Flechas superpuestas sobre la imagen */
+  .flecha {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    text-shadow: 2px 2px 5px  rgb(255, 255, 255);
+    /* 👈 ahora sobre el wrapper */
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(16, 0, 243, 0);
+    color: #000000;
+    border: none;
+    font-size: 32px;
+    padding: 1px 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    display: none;
+    /* ocultas por defecto */
+  }
+
+  #btnIzquierda {
+    left: 12px;
+  }
+
+  #btnDerecha {
+    right: 12px;
+  }
+
+  .flecha:hover {
+    background: rgba(0, 0, 0, 0.322);
+  }
+
+  /* Mostrar flechas SOLO en pantallas menores a 700px */
+  @media (max-width: 700px) {
+    .flecha {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .ver-bt:hover {
-        text-shadow: none;
+    .contenedor img {
+      height: 700px;
     }
+  }
 </style>
 
 <body>
-    <div class="contenido">
-        <div class="datos">
-            <a href="index.html#Galeria"> <i class="fa-solid fa-arrow-left fa-fade i"></i></a>
-            <button class="bt-r">Ver Presios de las fotos <i class="fa-solid fa-camera fa-shake iiii"></i></button>
-        </div>
-
-        <div class="galeria-2">
-
-
-
-
-
-            <!--naayla belen-->
-            <a href="https://photos.app.goo.gl/GSm1opSh8DdkNj6HA" target="_blank">
-                <div class="item">
-                    <img class="item-img" id="img2"
-                        src="https://lh3.googleusercontent.com/pw/AP1GczM02ryPXjrjnZiIShg_jyx0J-p7es3aw2Ofmsk55eXNNPO7lXHsL210_f75V5THgyyLy-MVQFrPhAUaA4msBC6LC-Ej300KdXw86UUEirYrQaeLMYlicdcXSMM886xkJ6rabt7MgKOjzJOFTZz59Tk=w486-h642-s-no-gm?authuser=6"
-                        alt="">
-                    <button class="ver-bt">Ver</button>
-                </div>
-            </a>
-
-
-            <!--zaahi-->
-            <a href="https://photos.app.goo.gl/yTJRDD6G5xE8jEz56" target="_blank">
-                <div class="item">
-                    <img class="item-img" id="img1"
-                        src="https://lh3.googleusercontent.com/pw/AP1GczPUJyOr_Cw6DEhoahexXebwqqYvZyJPVsLP5jrDqdnnUja2XmY7Bi6pHXaQiaczOStXWicpWruwAnniKc-UGoG27OvtZo6SWdL5KZIIYRweV_KXsAsmgTBhsO1wIqQEpJBadB3b4DKzOeB1pxPcAUc=w423-h634-s-no-gm?authuser=0"
-                        alt="">
-                    <button class="ver-bt">Ver</button>
-                </div>
-            </a>
-            
-            <!--Ana-->
-            <a href="https://photos.app.goo.gl/f7qoiVyEPtCZPpXx6" target="_blank">
-                <div class="item">
-                    <img class="item-img" id="img9"
-                        src="https://lh3.googleusercontent.com/pw/AP1GczOnEvdH1eqa7SD0AOTKaxS4EABFaivYjIOW3gywrZzknKzp_aABE-pr_zjIIF7DDE3G-5LhYZhqwSr6V8azxuPkNDa8zt543nN9wjdkkUMYfth6pvy5PKc2qmpciHTfVXmaia0KPUWPCLqVBF2YTpA=w423-h634-s-no-gm?authuser=0"
-                        alt="">
-                    <button class="ver-bt">Ver</button>
-                </div>
-            </a>
-
-            <!--kevin-->
-            <a href="https://photos.app.goo.gl/jxTGFn46WkFavEyp8" target="_blank">
-                <div class="item">
-                    <img class="item-img" id="img3"
-                        src="https://lh3.googleusercontent.com/pw/AP1GczNhvp1NaG6domDpPZxL-sZBGcvx-vFWKa6-B56vWPDGMFqlotS6qVDw0PqUQuiJ3dbfG0obFsxNmGDx5R04Fpy3ofUjGxC0AH37VieKgZ7ivq5AYP70l-fv-cjo-_90E-zYTDEKhqGx9UCEvV02Ch4=w423-h634-s-no-gm?authuser=7"
-                        alt="">
-                    <button class="ver-bt">Ver</button>
-                </div>
-            </a>
-            <!--evelin-->
-
-            <a href="https://photos.app.goo.gl/WtZWvYJ7BAUz9B9p6" target="_blank">
-                <div class="item">
-                    <img class="item-img" id="img4"
-                        src="https://lh3.googleusercontent.com/pw/AP1GczMCKVutKZ5m9W6mJQ6d4GmFhknUfDIxAyILPElty_8oa6BGgf5LxMqOtRQFXbGH_Zds8Fu799V1ygiW7P4X8SBBhJACZoRGw7x9MgRa8TRy8H9d73dAoPiIWqY4R3DNTdvxvqhxCtU1bKPV7HGzjA=w423-h634-s-no-gm?authuser=0"
-                        alt="">
-                    <button class="ver-bt">Ver</button>
-                </div>
-            </a>
-
-            <!--facu-->
-
-            <a href="https://photos.app.goo.gl/7PMiNf8BqrmyZgECA" target="_blank">
-                <div class="item">
-                    <img class="item-img" id="img5"
-                        src="https://lh3.googleusercontent.com/pw/AP1GczPLcl4Lqqp1Ttw5EVHTJpHrILCrQNMeHjExr_WsDs9McbW_FmpXBRH86UlmEI6t9MOb-1dvXM9PLyl4P-L0Hxwzr9rFPSxXlMNQqy6aQNXZt93Uu_W3qUaCoDAS77d7l8-Rj2vC1rZfoDfJz1FIo_i1=w423-h634-s-no-gm?authuser=0"
-                        alt="">
-                    <button class="ver-bt">Ver</button>
-                </div>
-            </a>
-
-            <!--araceli-->
-            <a href="https://photos.app.goo.gl/LVGB58BGw7j8WHeKA" target="_blank">
-                <div class="item">
-                    <img class="item-img" id="img6"
-                        src="https://lh3.googleusercontent.com/pw/AP1GczPsA4v628SjFOx5NSe8S7K30oKSf83xNdWObJhymzPbzF3I3Eyncy30DbSZ-R12ZgSoEbEu_ODhwELDjwzzu2BrAmJ6M_Yv3cAbMYgCLtpIxQCAmSqJdXNORAPCR-rLm9B9r7npuHJOOZDS739Wp9I=w313-h470-s-no-gm?authuser=6"
-                        alt="">
-                    <button class="ver-bt">ver </button>
-                </div>
-            </a>
-
-
-            <!--monce-->
-            <a href="https://photos.app.goo.gl/aXegontEThTXe8da8" target="_blank">
-                <div class="item">
-                    <img class="item-img" id="img7"
-                        src="https://lh3.googleusercontent.com/pw/AP1GczPFsO6ZuUlSE56wb6scPL6hbIyZCyIw0Ss3_ggk4iLeoVtgFsxpDbAWU-XKQj2A9Z5sNcXuGcR4jlbmpW9cAkXOtfVofbLjwo8WoKS_O75SZURp37oo4NppCouc2MRGVxHsdnck3nAyjXnJABpWP1M=w423-h634-s-no-gm?authuser=0"
-                        alt="">
-                    <button class="ver-bt">ver </button>
-                </div>
-            </a>
-
-
-            <!--naahuel-->
-            <a href=" https://photos.app.goo.gl/Qh7pKjppEAec6ATv5" target="_blank">
-                <div class="item">
-                    <img class="item-img" id="img8"
-                        src="https://lh3.googleusercontent.com/pw/AP1GczM3zrbRtQmVMKSDEpKf_dwkdM_ksqJiXBh7fYX_4Ty8qHy5w_6WKF3-e5x_dG-7xALPTTCbIjJbl6utmrn-YXtKO6q21ZaCk5hqRcNI6Zmwc32roo4M6SrTjkhEPqWQ-N6Knr3MLO1gZSntiE3YRBtU=w423-h634-s-no?authuser=0"
-                        alt="">
-                    <button class="ver-bt">ver </button>
-                </div>
-            </a>
-
-
-            <!--------------->
-
-
-
-
-
-        </div>
+  <div class="contenido">
+    <div class="datos">
+      <a href="index.html#Galeria"> <i class="fa-solid fa-arrow-left fa-fade i"></i></a>
+      <a href="#Galeria"> <button class="bt-r" style="width: 150px;">Ver Presios de las fotos</button></a>
     </div>
 
-    <footer>
-        <h4 onclick="contacto();"> @lhuis ruiz</h4>
-    </footer>
+    <div class="galeria-2">
+
+
+
+
+
+      <!--naayla belen-->
+      <a href="https://photos.app.goo.gl/GSm1opSh8DdkNj6HA" target="_blank">
+        <div class="item">
+          <img class="item-img" id="img2"
+            src="https://lh3.googleusercontent.com/pw/AP1GczM02ryPXjrjnZiIShg_jyx0J-p7es3aw2Ofmsk55eXNNPO7lXHsL210_f75V5THgyyLy-MVQFrPhAUaA4msBC6LC-Ej300KdXw86UUEirYrQaeLMYlicdcXSMM886xkJ6rabt7MgKOjzJOFTZz59Tk=w486-h642-s-no-gm?authuser=6"
+            alt="">
+          <button class="ver-bt">Ver</button>
+        </div>
+      </a>
+
+
+      <!--zaahi-->
+      <a href="https://photos.app.goo.gl/yTJRDD6G5xE8jEz56" target="_blank">
+        <div class="item">
+          <img class="item-img" id="img1"
+            src="https://lh3.googleusercontent.com/pw/AP1GczPUJyOr_Cw6DEhoahexXebwqqYvZyJPVsLP5jrDqdnnUja2XmY7Bi6pHXaQiaczOStXWicpWruwAnniKc-UGoG27OvtZo6SWdL5KZIIYRweV_KXsAsmgTBhsO1wIqQEpJBadB3b4DKzOeB1pxPcAUc=w423-h634-s-no-gm?authuser=0"
+            alt="">
+          <button class="ver-bt">Ver</button>
+        </div>
+      </a>
+
+      <!--Ana-->
+      <a href="https://photos.app.goo.gl/f7qoiVyEPtCZPpXx6" target="_blank">
+        <div class="item">
+          <img class="item-img" id="img9"
+            src="https://lh3.googleusercontent.com/pw/AP1GczOnEvdH1eqa7SD0AOTKaxS4EABFaivYjIOW3gywrZzknKzp_aABE-pr_zjIIF7DDE3G-5LhYZhqwSr6V8azxuPkNDa8zt543nN9wjdkkUMYfth6pvy5PKc2qmpciHTfVXmaia0KPUWPCLqVBF2YTpA=w423-h634-s-no-gm?authuser=0"
+            alt="">
+          <button class="ver-bt">Ver</button>
+        </div>
+      </a>
+
+      <!--kevin-->
+      <a href="https://photos.app.goo.gl/jxTGFn46WkFavEyp8" target="_blank">
+        <div class="item">
+          <img class="item-img" id="img3"
+            src="https://lh3.googleusercontent.com/pw/AP1GczNhvp1NaG6domDpPZxL-sZBGcvx-vFWKa6-B56vWPDGMFqlotS6qVDw0PqUQuiJ3dbfG0obFsxNmGDx5R04Fpy3ofUjGxC0AH37VieKgZ7ivq5AYP70l-fv-cjo-_90E-zYTDEKhqGx9UCEvV02Ch4=w423-h634-s-no-gm?authuser=7"
+            alt="">
+          <button class="ver-bt">Ver</button>
+        </div>
+      </a>
+      <!--evelin-->
+
+      <a href="https://photos.app.goo.gl/WtZWvYJ7BAUz9B9p6" target="_blank">
+        <div class="item">
+          <img class="item-img" id="img4"
+            src="https://lh3.googleusercontent.com/pw/AP1GczMCKVutKZ5m9W6mJQ6d4GmFhknUfDIxAyILPElty_8oa6BGgf5LxMqOtRQFXbGH_Zds8Fu799V1ygiW7P4X8SBBhJACZoRGw7x9MgRa8TRy8H9d73dAoPiIWqY4R3DNTdvxvqhxCtU1bKPV7HGzjA=w423-h634-s-no-gm?authuser=0"
+            alt="">
+          <button class="ver-bt">Ver</button>
+        </div>
+      </a>
+
+      <!--facu-->
+
+      <a href="https://photos.app.goo.gl/7PMiNf8BqrmyZgECA" target="_blank">
+        <div class="item">
+          <img class="item-img" id="img5"
+            src="https://lh3.googleusercontent.com/pw/AP1GczPLcl4Lqqp1Ttw5EVHTJpHrILCrQNMeHjExr_WsDs9McbW_FmpXBRH86UlmEI6t9MOb-1dvXM9PLyl4P-L0Hxwzr9rFPSxXlMNQqy6aQNXZt93Uu_W3qUaCoDAS77d7l8-Rj2vC1rZfoDfJz1FIo_i1=w423-h634-s-no-gm?authuser=0"
+            alt="">
+          <button class="ver-bt">Ver</button>
+        </div>
+      </a>
+
+      <!--araceli-->
+      <a href="https://photos.app.goo.gl/LVGB58BGw7j8WHeKA" target="_blank">
+        <div class="item">
+          <img class="item-img" id="img6"
+            src="https://lh3.googleusercontent.com/pw/AP1GczPsA4v628SjFOx5NSe8S7K30oKSf83xNdWObJhymzPbzF3I3Eyncy30DbSZ-R12ZgSoEbEu_ODhwELDjwzzu2BrAmJ6M_Yv3cAbMYgCLtpIxQCAmSqJdXNORAPCR-rLm9B9r7npuHJOOZDS739Wp9I=w313-h470-s-no-gm?authuser=6"
+            alt="">
+          <button class="ver-bt">ver </button>
+        </div>
+      </a>
+
+
+      <!--monce-->
+      <a href="https://photos.app.goo.gl/aXegontEThTXe8da8" target="_blank">
+        <div class="item">
+          <img class="item-img" id="img7"
+            src="https://lh3.googleusercontent.com/pw/AP1GczPFsO6ZuUlSE56wb6scPL6hbIyZCyIw0Ss3_ggk4iLeoVtgFsxpDbAWU-XKQj2A9Z5sNcXuGcR4jlbmpW9cAkXOtfVofbLjwo8WoKS_O75SZURp37oo4NppCouc2MRGVxHsdnck3nAyjXnJABpWP1M=w423-h634-s-no-gm?authuser=0"
+            alt="">
+          <button class="ver-bt">ver </button>
+        </div>
+      </a>
+
+
+      <!--naahuel-->
+      <a href=" https://photos.app.goo.gl/Qh7pKjppEAec6ATv5" target="_blank">
+        <div class="item">
+          <img class="item-img" id="img8"
+            src="https://lh3.googleusercontent.com/pw/AP1GczM3zrbRtQmVMKSDEpKf_dwkdM_ksqJiXBh7fYX_4Ty8qHy5w_6WKF3-e5x_dG-7xALPTTCbIjJbl6utmrn-YXtKO6q21ZaCk5hqRcNI6Zmwc32roo4M6SrTjkhEPqWQ-N6Knr3MLO1gZSntiE3YRBtU=w423-h634-s-no?authuser=0"
+            alt="">
+          <button class="ver-bt">ver </button>
+        </div>
+      </a>
+
+
+      <!--------------->
+
+
+
+
+
     </div>
+  </div>
+  <div id="Galeria">
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+  <div class="wrapper">
+    <div class="contenedor" id="contenedor">
+      <img src="https://res.cloudinary.com/dslvhklx8/image/upload/v1757298781/Mapa_de_la_Gran_Buenos_Aires_bvansj.jpg" alt="Mapa de la Gran Buenos Aires" />
+    </div>
+    <!-- Flechas superpuestas al wrapper, NO dentro del scroll -->
+    <button class="flecha" id="btnIzquierda" aria-label="Mover a la izquierda">⬅</button>
+    <button class="flecha" id="btnDerecha" aria-label="Mover a la derecha">➡</button>
+  </div>
+
+  <div class="t"></div>
+
+
+
+
+  <div class="wrap">
+    <div class="card">
+      <h1>Solicitud de contratación</h1>
+      <p class="lead">Completá los datos y se armará un mensaje directo a WhatsApp.</p>
+
+      <!-- Botón inicial -->
+      <button id="btnContratar" class="btn btn-primary" type="button">Contratar</button>
+
+      <!-- Formulario -->
+      <div id="formWrap" class="hidden">
+        <form id="formulario" class="reveal" autocomplete="on">
+          <div class="row">
+            <div class="field">
+              <label for="localidad">Localidad *</label>
+              <select id="localidad" required>
+                <option value="" disabled selected>Elegí una opción</option>
+                <option value="Pilar">Pilar</option>
+                <option value="La Lonja">La Lonja</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="mes">Mes *</label>
+              <select id="mes" required>
+                <option value="" disabled selected>Elegí el mes</option>
+                <option value="Enero">Enero</option>
+                <option value="Febrero">Febrero</option>
+                <option value="Marzo">Marzo</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="dia">Día *</label>
+            <input type="number" id="dia" min="1" max="31" required placeholder="Ej: 15" />
+          </div>
+
+          <div class="field">
+            <label for="direccion">Dirección *</label>
+            <input type="text" id="direccion" required placeholder="Calle, número, referencia" />
+          </div>
+
+          <div class="field">
+            <label for="horas">Horas *</label>
+            <select id="horas" required>
+              <option value="1">1 hora</option>
+              <option value="2">2 horas</option>
+              <option value="3">3 horas</option>
+            </select>
+          </div>
+
+          <div class="price">
+            <strong>Precio:</strong> <span id="precioTexto" class="muted">seleccioná Localidad, Mes y Horas</span>
+          </div>
+
+          <button class="btn btn-primary" type="submit">
+            Enviar por WhatsApp
+          </button>
+
+          <div class="footer-note">Los campos con * son obligatorios.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <footer>
+    <h4 onclick="contacto();"> @lhuis ruiz</h4>
+  </footer>
+  </div>
 </body>
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="main.js"></script>
 <script>
-    // Lista de imágenes para ambos divs
-    const imagenes = [
-        "https://lh3.googleusercontent.com/pw/AP1GczPO3mbemr9kWtYdYUTIDTEEWQ5oEqaS3ZyNZR8C8zL9S5ELirHAqN8QNl7813Mjb59QHwZu5MBkwO6ldRb9aR-ZOrre_TYyg8X5JJTLJys6F11BFqRisv01ENzVCI6FwpuGaEvI-mrbHSc5k0q59gg=w423-h634-s-no-gm?authuser=0",
-        "https://lh3.googleusercontent.com/pw/AP1GczP477mNrVvyni59vtpSr7eQfoY_Cih42DhXbXtO5jzzOnS3W-FxUQJZwMbweZf2rN0-lwXvbLZmKuVkJKvSzgQzX2MkBKCqUIHTap1zeyMkPDV5C6n4SQySppu48Cc0oZR3v1EmbEODWmnmtgVgKb8=w423-h634-s-no-gm?authuser=0",
-        "https://lh3.googleusercontent.com/pw/AP1GczMvuO-XGzhVM1CjUm8SOZI5IvO0U1c2MmWS2SJlj1GFSyRsAgV6oeMQRY5Zn4WvrLAkbeLtZheSte0g2dVfua4MWWW9OZk9facBYa6gMIo6tLwx2TmbXgA6fU1wnND-nTeF7EYpw06NZUAXW7rgqqY=w423-h634-s-no-gm?authuser=0"
-    ];
+  // Lista de imágenes para ambos divs
+  const imagenes = [
+    "https://lh3.googleusercontent.com/pw/AP1GczPO3mbemr9kWtYdYUTIDTEEWQ5oEqaS3ZyNZR8C8zL9S5ELirHAqN8QNl7813Mjb59QHwZu5MBkwO6ldRb9aR-ZOrre_TYyg8X5JJTLJys6F11BFqRisv01ENzVCI6FwpuGaEvI-mrbHSc5k0q59gg=w423-h634-s-no-gm?authuser=0",
+    "https://lh3.googleusercontent.com/pw/AP1GczP477mNrVvyni59vtpSr7eQfoY_Cih42DhXbXtO5jzzOnS3W-FxUQJZwMbweZf2rN0-lwXvbLZmKuVkJKvSzgQzX2MkBKCqUIHTap1zeyMkPDV5C6n4SQySppu48Cc0oZR3v1EmbEODWmnmtgVgKb8=w423-h634-s-no-gm?authuser=0",
+    "https://lh3.googleusercontent.com/pw/AP1GczMvuO-XGzhVM1CjUm8SOZI5IvO0U1c2MmWS2SJlj1GFSyRsAgV6oeMQRY5Zn4WvrLAkbeLtZheSte0g2dVfua4MWWW9OZk9facBYa6gMIo6tLwx2TmbXgA6fU1wnND-nTeF7EYpw06NZUAXW7rgqqY=w423-h634-s-no-gm?authuser=0"
+  ];
 
-    const imagenes2 = [
-        "https://lh3.googleusercontent.com/pw/AP1GczMQFOFDzQ0t0-hBgXJz7C5KHxp3j4pxqroQYuwlesY9QT0BP3HqFoZ3eeJFdzoX3khggeSPZ4rE8LTc0snWblr9caQmYJu7h4NyCK3A0U72slL9_mxcOyEqJ2pO0-AYg_ObgPkr0cGtN9qvt4ynIO8=w423-h634-s-no-gm?authuser=0",
-        "https://lh3.googleusercontent.com/pw/AP1GczPnTaUPgjb3kZXlTV8RYcRrCOmGNGeicFYw4D4hp9W3IdJD7KxCDsExFtfKw8wfY5p5gZOSGzHBHREEg9LzlOlz7_WQsc9pQh5pUJ71EDK_8JhvEWKUL9lEqJ3E1K-cNaypcsMSDrsdjCdXf8WAkBk=w423-h634-s-no-gm?authuser=0",
-        "https://lh3.googleusercontent.com/pw/AP1GczN5Nt2i_KCk1MxKOWwltj_rMwSo1FI00onkRYaJZ6b0MFAGFzacL-emZz2uLV_4T-71A9E1aOAUjNSrslV6VwLAy77HXSXznppx7CjJ3jjfc3BbvAcqf4y88DWZUPt8r1NXWrIYWA_-Kp6vGr8LG2I=w423-h634-s-no-gm?authuser=0"
-    ];
-    const imagenes3 = [
-        "https://lh3.googleusercontent.com/pw/AP1GczNGRZa8cY0jlXfx4F3Bevl7ADOf64LEVXpBbk5WH2nIzJ9PxIgbRBgj23zhmGpbYswn5tQqWF_AMCn-I4blMnOZe7CyLeXbIIKSfpEFD6kd_GiMwTWxfMvTf2xObf09eenOR3Dac5QaUvd0_70wLXo=w423-h634-s-no-gm?authuser=7",
-        "https://lh3.googleusercontent.com/pw/AP1GczO5arALMHRwqlpTZJ1SMaKy32XFEqNw7eLDhpEAzJgamP-gQqfhpsxbRAd3RrKfWAWX32o2rFg46Ig2iPpbuWIm64UUgQrrUDVcksMIl3zW8h1EiSMqLvKJrh25N7K3WrTKgcTtTKWSzOw6HTOk5yY=w423-h634-s-no-gm?authuser=7",
-        "https://lh3.googleusercontent.com/pw/AP1GczNXTzweKJhixtdAp0KqzNT2ou7jwucx-dlp-xh3UeJCfiJ4iIN3xrUn5lE2HFGVYcSeeInvVFhX3RQcLA4ekE2vmRJyFBb0Gx0oDiS0SEy-FxqoZoGVe2UOtKIETXkeb5URQWZoPnHYj6kQKfraPIQ=w423-h634-s-no-gm?authuser=7"
-    ];
-    const imagenes4 = [
-        "https://lh3.googleusercontent.com/pw/AP1GczMqI0WPy_OF7ryKeQes_yLAfXvHZDJhQxc_-smXJz4rVQVf828vk4pxpNW8nPlGt9yAwp49qEcG_b6xBVKXYSurolygqsPdJdrR75dz-o9h10sCEITywcM53oVBwZxqtK91sF9c9_KXkm0eqaPKcw=w423-h634-s-no-gm?authuser=0",
-        "https://lh3.googleusercontent.com/pw/AP1GczNsuetU0_jWLToRrWXXudrAgYIsngjpWFrMTgkUYPPnjeZBU3cyTDBva8WMgseMWvZ1h7HgcAEQ1EchYdEjgAuDdG0To3Lk7QOKNwr3Adpy1YE_Jk_fMP7cvDbrBfQC4_8AbhIE985aCMb6Y2rB1g=w506-h337-s-no-gm?authuser=0",
-        "https://lh3.googleusercontent.com/pw/AP1GczO1jhbyJ-dw8Y0vAADlSjaaBJr-Oal1mReiEBpTqHQ6dxcFi-jBoaLOQ4G4rwZxYL2Iy0NSvVPtu_Rv0celGC_AobOeaUU87VF5wcYBioFDC6tk2UbN4hCiy9ewaVdGuRHlWuvalGAc3k1a_dH48w=w423-h634-s-no-gm?authuser=0"
-    ];
+  const imagenes2 = [
+    "https://lh3.googleusercontent.com/pw/AP1GczMQFOFDzQ0t0-hBgXJz7C5KHxp3j4pxqroQYuwlesY9QT0BP3HqFoZ3eeJFdzoX3khggeSPZ4rE8LTc0snWblr9caQmYJu7h4NyCK3A0U72slL9_mxcOyEqJ2pO0-AYg_ObgPkr0cGtN9qvt4ynIO8=w423-h634-s-no-gm?authuser=0",
+    "https://lh3.googleusercontent.com/pw/AP1GczPnTaUPgjb3kZXlTV8RYcRrCOmGNGeicFYw4D4hp9W3IdJD7KxCDsExFtfKw8wfY5p5gZOSGzHBHREEg9LzlOlz7_WQsc9pQh5pUJ71EDK_8JhvEWKUL9lEqJ3E1K-cNaypcsMSDrsdjCdXf8WAkBk=w423-h634-s-no-gm?authuser=0",
+    "https://lh3.googleusercontent.com/pw/AP1GczN5Nt2i_KCk1MxKOWwltj_rMwSo1FI00onkRYaJZ6b0MFAGFzacL-emZz2uLV_4T-71A9E1aOAUjNSrslV6VwLAy77HXSXznppx7CjJ3jjfc3BbvAcqf4y88DWZUPt8r1NXWrIYWA_-Kp6vGr8LG2I=w423-h634-s-no-gm?authuser=0"
+  ];
+  const imagenes3 = [
+    "https://lh3.googleusercontent.com/pw/AP1GczNGRZa8cY0jlXfx4F3Bevl7ADOf64LEVXpBbk5WH2nIzJ9PxIgbRBgj23zhmGpbYswn5tQqWF_AMCn-I4blMnOZe7CyLeXbIIKSfpEFD6kd_GiMwTWxfMvTf2xObf09eenOR3Dac5QaUvd0_70wLXo=w423-h634-s-no-gm?authuser=7",
+    "https://lh3.googleusercontent.com/pw/AP1GczO5arALMHRwqlpTZJ1SMaKy32XFEqNw7eLDhpEAzJgamP-gQqfhpsxbRAd3RrKfWAWX32o2rFg46Ig2iPpbuWIm64UUgQrrUDVcksMIl3zW8h1EiSMqLvKJrh25N7K3WrTKgcTtTKWSzOw6HTOk5yY=w423-h634-s-no-gm?authuser=7",
+    "https://lh3.googleusercontent.com/pw/AP1GczNXTzweKJhixtdAp0KqzNT2ou7jwucx-dlp-xh3UeJCfiJ4iIN3xrUn5lE2HFGVYcSeeInvVFhX3RQcLA4ekE2vmRJyFBb0Gx0oDiS0SEy-FxqoZoGVe2UOtKIETXkeb5URQWZoPnHYj6kQKfraPIQ=w423-h634-s-no-gm?authuser=7"
+  ];
+  const imagenes4 = [
+    "https://lh3.googleusercontent.com/pw/AP1GczMqI0WPy_OF7ryKeQes_yLAfXvHZDJhQxc_-smXJz4rVQVf828vk4pxpNW8nPlGt9yAwp49qEcG_b6xBVKXYSurolygqsPdJdrR75dz-o9h10sCEITywcM53oVBwZxqtK91sF9c9_KXkm0eqaPKcw=w423-h634-s-no-gm?authuser=0",
+    "https://lh3.googleusercontent.com/pw/AP1GczNsuetU0_jWLToRrWXXudrAgYIsngjpWFrMTgkUYPPnjeZBU3cyTDBva8WMgseMWvZ1h7HgcAEQ1EchYdEjgAuDdG0To3Lk7QOKNwr3Adpy1YE_Jk_fMP7cvDbrBfQC4_8AbhIE985aCMb6Y2rB1g=w506-h337-s-no-gm?authuser=0",
+    "https://lh3.googleusercontent.com/pw/AP1GczO1jhbyJ-dw8Y0vAADlSjaaBJr-Oal1mReiEBpTqHQ6dxcFi-jBoaLOQ4G4rwZxYL2Iy0NSvVPtu_Rv0celGC_AobOeaUU87VF5wcYBioFDC6tk2UbN4hCiy9ewaVdGuRHlWuvalGAc3k1a_dH48w=w423-h634-s-no-gm?authuser=0"
+  ];
 
-    const imagenes5 = [
-        "https://lh3.googleusercontent.com/pw/AP1GczPwrCP1Dd3RikEP2S12Xymb3hNOJwC0nkDoRWHXXPvdBTSSwhiWBmzgbCMDHxcb4hP8fDfHw8ccwPPItmAWQ4Ipay0VYGHR1UQ16libdYPfVsCOvCsdChjC5OzGi8UKO37wc9GqaMMA0uCouoOgaciR=w423-h634-s-no-gm?authuser=0",
-        "https://lh3.googleusercontent.com/pw/AP1GczPm2HeWcEvvOsRmkaYVbmlSBbQtf_XNF5mUIgAlKSSs0lZRO5CSbDEEfRBq44tTRglAwElnrh4AeWnFlXcDXeo5dk4Xj5rI3GkeOIfhsOiZdRAmhFthLY9eWqAde58oP3__4Y2tcsuFXb3zRWJg47Gj=w423-h634-s-no-gm?authuser=0",
-        "https://lh3.googleusercontent.com/pw/AP1GczOyADhTs6h3MgEBLxtphbTKa74UC3onBLxY6nFoMsMC9V8lIbT7kfx3d9d9CxfGi_8pwLLuCPbOPDNBwmwDoJrak45ysVimKeFvspG2NxN6OXGzMetq8UauRDLbeE4sYbSW2p_xatTpqB1ZzUCVTga4=w423-h634-s-no-gm?authuser=0"
-    ];
-    const imagenes6 = [
-        "https://lh3.googleusercontent.com/pw/AP1GczN4lCrYSQtQc_P_RNoeQgtZm08oQpMGGK1P7FpZs5b0kJy3RhXW6FDUeteElBf2SUNYqbUKLcNOJsOqlorwsOBScuN5JpuoGrUqJOiiZBNnBeN8HsCPSZRHRZOi2VX7wv1YMl_Ch0-g7aHKfmHMEHg=w267-h400-s-no-gm?authuser=6",
-        "https://lh3.googleusercontent.com/pw/AP1GczOnk-H2t1ow-ijP75rkBBdEm9TAihclzxsnGn19yZM3_4BPOR4bBDhm2Bsg0XcVE0qnbjg7LwdkzeU6V8hz2Ypl8J0HNYsU3W-bQsuXiBkurE9f8xNKFZvAJf1T-tBQ7XFdF9qABtl-JtF5yQx6BNk=w267-h400-s-no-gm?authuser=6",
-        "https://lh3.googleusercontent.com/pw/AP1GczOnk-H2t1ow-ijP75rkBBdEm9TAihclzxsnGn19yZM3_4BPOR4bBDhm2Bsg0XcVE0qnbjg7LwdkzeU6V8hz2Ypl8J0HNYsU3W-bQsuXiBkurE9f8xNKFZvAJf1T-tBQ7XFdF9qABtl-JtF5yQx6BNk=w267-h400-s-no-gm?authuser=6"
-    ];
+  const imagenes5 = [
+    "https://lh3.googleusercontent.com/pw/AP1GczPwrCP1Dd3RikEP2S12Xymb3hNOJwC0nkDoRWHXXPvdBTSSwhiWBmzgbCMDHxcb4hP8fDfHw8ccwPPItmAWQ4Ipay0VYGHR1UQ16libdYPfVsCOvCsdChjC5OzGi8UKO37wc9GqaMMA0uCouoOgaciR=w423-h634-s-no-gm?authuser=0",
+    "https://lh3.googleusercontent.com/pw/AP1GczPm2HeWcEvvOsRmkaYVbmlSBbQtf_XNF5mUIgAlKSSs0lZRO5CSbDEEfRBq44tTRglAwElnrh4AeWnFlXcDXeo5dk4Xj5rI3GkeOIfhsOiZdRAmhFthLY9eWqAde58oP3__4Y2tcsuFXb3zRWJg47Gj=w423-h634-s-no-gm?authuser=0",
+    "https://lh3.googleusercontent.com/pw/AP1GczOyADhTs6h3MgEBLxtphbTKa74UC3onBLxY6nFoMsMC9V8lIbT7kfx3d9d9CxfGi_8pwLLuCPbOPDNBwmwDoJrak45ysVimKeFvspG2NxN6OXGzMetq8UauRDLbeE4sYbSW2p_xatTpqB1ZzUCVTga4=w423-h634-s-no-gm?authuser=0"
+  ];
+  const imagenes6 = [
+    "https://lh3.googleusercontent.com/pw/AP1GczN4lCrYSQtQc_P_RNoeQgtZm08oQpMGGK1P7FpZs5b0kJy3RhXW6FDUeteElBf2SUNYqbUKLcNOJsOqlorwsOBScuN5JpuoGrUqJOiiZBNnBeN8HsCPSZRHRZOi2VX7wv1YMl_Ch0-g7aHKfmHMEHg=w267-h400-s-no-gm?authuser=6",
+    "https://lh3.googleusercontent.com/pw/AP1GczOnk-H2t1ow-ijP75rkBBdEm9TAihclzxsnGn19yZM3_4BPOR4bBDhm2Bsg0XcVE0qnbjg7LwdkzeU6V8hz2Ypl8J0HNYsU3W-bQsuXiBkurE9f8xNKFZvAJf1T-tBQ7XFdF9qABtl-JtF5yQx6BNk=w267-h400-s-no-gm?authuser=6",
+    "https://lh3.googleusercontent.com/pw/AP1GczOnk-H2t1ow-ijP75rkBBdEm9TAihclzxsnGn19yZM3_4BPOR4bBDhm2Bsg0XcVE0qnbjg7LwdkzeU6V8hz2Ypl8J0HNYsU3W-bQsuXiBkurE9f8xNKFZvAJf1T-tBQ7XFdF9qABtl-JtF5yQx6BNk=w267-h400-s-no-gm?authuser=6"
+  ];
 
-    const imagenes7 = [
-        "https://lh3.googleusercontent.com/pw/AP1GczOwf8c5Ezqkn85v4tp2YqaH7sX1RSyxtD50SyWIaARKy1w5iSrEXEt9F5hgNAEXqN0Hmv10RQE2fYu7oDbRXwUOyCulDs8DjOjepICGMGI0bS1tTPYZTY9ivCDAZYG_WoBrokYvhOljc4I13mrHVf4=w423-h634-s-no-gm?authuser=0",
-        "https://lh3.googleusercontent.com/pw/AP1GczNdxwb2VDITdl1RPiyPZjTbwDp3Z74ycktaw00CVoOJGkrofCXa6ohwT3wjnd2pDlB7tzwapS3VgcXow_n_TtlgV5x4l6-lyqtl-PLVINUBzuqS2DuJ9Cvsqx4I9g3xXfMXFegIw59FbyotCNIuqLE=w423-h634-s-no-gm?authuser=0",
-        "https://lh3.googleusercontent.com/pw/AP1GczMeJdgCXmR7hn9zDyunYL0Pu1_N5XCf2zVxxPpBeaF5CpkSTr-fxrFjLGKhOeJkU64DXKjz3EMrTU5tOmnpgjNgXli-euin1GZG6S6gk-jp2bBJDx1cETvuphjbqYv-DxHYKEuVbC1MqN-KmWIKK2E=w423-h634-s-no-gm?authuser=0"
-    ];
-    const imagenes8 = [
-        "https://lh3.googleusercontent.com/pw/AP1GczP9wE1kSzcIfdoO1EkdbddtMD_NPjengWQ8Tjy6KL8KnJuRCV5YhNI7HextTF5xGcsQPxdlP2aUspI3yuH_AoqPQn-KE4fHJPE2hmvoUjVYwcB27PXVbEdtm4RRBMFny0ou0VIFozRiCQX8QMHLzHp4=w423-h634-s-no?authuser=0",
-        "https://lh3.googleusercontent.com/pw/AP1GczMzra5E0rzjEIWkUJ1lPTC69wBHYKGKaCK4EQaDU9H_kj5c6NscEKDM3Kq5caEiErTg1RH7Ii4ylc3EgXDX7AwchgeNFWuO5nlA7HDdeQF4fUo1yu5cPDWtbpqK10TwVvQp1I7lhKThoCZMPreehiE0=w476-h634-s-no?authuser=0",
-        "https://lh3.googleusercontent.com/pw/AP1GczNl6dCEYdI__nWqtUYVqvy1u0f6L_sHSTiKEPVwxH1-2VAUSVfsbqFiocmHmGn9k7XcMytpqfnPDh-8Ft0SzQxKvWKGUqqHbefWy7jL9OAdMFMSj3av7NdEbu72T6Sd5otrDwxQniXBeuP2zg2ARSqB=w423-h634-s-no?authuser=0"
-    ];
-    const imagenes9 = [
-        "https://lh3.googleusercontent.com/pw/AP1GczOnEvdH1eqa7SD0AOTKaxS4EABFaivYjIOW3gywrZzknKzp_aABE-pr_zjIIF7DDE3G-5LhYZhqwSr6V8azxuPkNDa8zt543nN9wjdkkUMYfth6pvy5PKc2qmpciHTfVXmaia0KPUWPCLqVBF2YTpA=w423-h634-s-no-gm?authuser=0",
-        "https://lh3.googleusercontent.com/pw/AP1GczNDjbQ-1fU89rLH0kYg9e34kK3yHu6wLuejObI3g1mqJTvaK1khDTfyzmSxlt13Ofu53DcJrMKqa5rtIc7-4rxwJMCyG7keRsA6Dy4XVa7mIbyjvQby5v9fphR_qAFg3ytZJMESRJ5kjrsnzjtXq1c=w423-h634-s-no-gm?authuser=0",
-        "https://lh3.googleusercontent.com/pw/AP1GczOQXNP8Tmd5DMPS_xO0oe4BzhRCFAQlu2VY3k53sMP1V40tck5JtZxmMWqZjkwJFBOPqvCpG8aySo1wq-8YUQ6luJxVJokwSxQnbEICmaPaXAY87LA4LQ4ej-VNjRTJYnnaja5EUcBA_F304RRvYjo=w423-h634-s-no-gm?authuser=0"
-    ];
-
-
+  const imagenes7 = [
+    "https://lh3.googleusercontent.com/pw/AP1GczOwf8c5Ezqkn85v4tp2YqaH7sX1RSyxtD50SyWIaARKy1w5iSrEXEt9F5hgNAEXqN0Hmv10RQE2fYu7oDbRXwUOyCulDs8DjOjepICGMGI0bS1tTPYZTY9ivCDAZYG_WoBrokYvhOljc4I13mrHVf4=w423-h634-s-no-gm?authuser=0",
+    "https://lh3.googleusercontent.com/pw/AP1GczNdxwb2VDITdl1RPiyPZjTbwDp3Z74ycktaw00CVoOJGkrofCXa6ohwT3wjnd2pDlB7tzwapS3VgcXow_n_TtlgV5x4l6-lyqtl-PLVINUBzuqS2DuJ9Cvsqx4I9g3xXfMXFegIw59FbyotCNIuqLE=w423-h634-s-no-gm?authuser=0",
+    "https://lh3.googleusercontent.com/pw/AP1GczMeJdgCXmR7hn9zDyunYL0Pu1_N5XCf2zVxxPpBeaF5CpkSTr-fxrFjLGKhOeJkU64DXKjz3EMrTU5tOmnpgjNgXli-euin1GZG6S6gk-jp2bBJDx1cETvuphjbqYv-DxHYKEuVbC1MqN-KmWIKK2E=w423-h634-s-no-gm?authuser=0"
+  ];
+  const imagenes8 = [
+    "https://lh3.googleusercontent.com/pw/AP1GczP9wE1kSzcIfdoO1EkdbddtMD_NPjengWQ8Tjy6KL8KnJuRCV5YhNI7HextTF5xGcsQPxdlP2aUspI3yuH_AoqPQn-KE4fHJPE2hmvoUjVYwcB27PXVbEdtm4RRBMFny0ou0VIFozRiCQX8QMHLzHp4=w423-h634-s-no?authuser=0",
+    "https://lh3.googleusercontent.com/pw/AP1GczMzra5E0rzjEIWkUJ1lPTC69wBHYKGKaCK4EQaDU9H_kj5c6NscEKDM3Kq5caEiErTg1RH7Ii4ylc3EgXDX7AwchgeNFWuO5nlA7HDdeQF4fUo1yu5cPDWtbpqK10TwVvQp1I7lhKThoCZMPreehiE0=w476-h634-s-no?authuser=0",
+    "https://lh3.googleusercontent.com/pw/AP1GczNl6dCEYdI__nWqtUYVqvy1u0f6L_sHSTiKEPVwxH1-2VAUSVfsbqFiocmHmGn9k7XcMytpqfnPDh-8Ft0SzQxKvWKGUqqHbefWy7jL9OAdMFMSj3av7NdEbu72T6Sd5otrDwxQniXBeuP2zg2ARSqB=w423-h634-s-no?authuser=0"
+  ];
+  const imagenes9 = [
+    "https://lh3.googleusercontent.com/pw/AP1GczOnEvdH1eqa7SD0AOTKaxS4EABFaivYjIOW3gywrZzknKzp_aABE-pr_zjIIF7DDE3G-5LhYZhqwSr6V8azxuPkNDa8zt543nN9wjdkkUMYfth6pvy5PKc2qmpciHTfVXmaia0KPUWPCLqVBF2YTpA=w423-h634-s-no-gm?authuser=0",
+    "https://lh3.googleusercontent.com/pw/AP1GczNDjbQ-1fU89rLH0kYg9e34kK3yHu6wLuejObI3g1mqJTvaK1khDTfyzmSxlt13Ofu53DcJrMKqa5rtIc7-4rxwJMCyG7keRsA6Dy4XVa7mIbyjvQby5v9fphR_qAFg3ytZJMESRJ5kjrsnzjtXq1c=w423-h634-s-no-gm?authuser=0",
+    "https://lh3.googleusercontent.com/pw/AP1GczOQXNP8Tmd5DMPS_xO0oe4BzhRCFAQlu2VY3k53sMP1V40tck5JtZxmMWqZjkwJFBOPqvCpG8aySo1wq-8YUQ6luJxVJokwSxQnbEICmaPaXAY87LA4LQ4ej-VNjRTJYnnaja5EUcBA_F304RRvYjo=w423-h634-s-no-gm?authuser=0"
+  ];
 
 
 
-    let index = 0;
-
-    function cambiarImagenes() {
-        index = (index + 1) % imagenes.length; // Ciclo de imágenes
-        document.getElementById("img1").src = imagenes[index];
-        document.getElementById("img2").src = imagenes2[index];
-        document.getElementById("img3").src = imagenes3[index];
-        document.getElementById("img4").src = imagenes4[index];
-        document.getElementById("img5").src = imagenes5[index];
-        document.getElementById("img6").src = imagenes6[index];
-        document.getElementById("img7").src = imagenes7[index];
-        document.getElementById("img8").src = imagenes8[index];
-        document.getElementById("img9").src = imagenes9[index];
 
 
+  let index = 0;
 
-    }
+  function cambiarImagenes() {
+    index = (index + 1) % imagenes.length; // Ciclo de imágenes
+    document.getElementById("img1").src = imagenes[index];
+    document.getElementById("img2").src = imagenes2[index];
+    document.getElementById("img3").src = imagenes3[index];
+    document.getElementById("img4").src = imagenes4[index];
+    document.getElementById("img5").src = imagenes5[index];
+    document.getElementById("img6").src = imagenes6[index];
+    document.getElementById("img7").src = imagenes7[index];
+    document.getElementById("img8").src = imagenes8[index];
+    document.getElementById("img9").src = imagenes9[index];
 
-    setInterval(cambiarImagenes, 7000); // Cambia cada 3 segundos
+
+
+  }
+
+  setInterval(cambiarImagenes, 7000); // Cambia cada 3 segundos
 
 </script>
+<script>
+  const contenedor = document.getElementById('contenedor');
+  const btnIzquierda = document.getElementById('btnIzquierda');
+  const btnDerecha = document.getElementById('btnDerecha');
 
+  const paso = 200; // px por clic
+
+  btnIzquierda.addEventListener('click', () => {
+    contenedor.scrollBy({ left: -paso, behavior: 'smooth' });
+  });
+
+  btnDerecha.addEventListener('click', () => {
+    contenedor.scrollBy({ left: paso, behavior: 'smooth' });
+  });
+</script>
+<script>
+  const PRECIOS = {
+    "Pilar": { "Enero": 150, "Febrero": 153, "Marzo": 156 },
+    "La Lonja": { "Enero": 100, "Febrero": 103, "Marzo": 106 }
+  };
+
+  const btnContratar = document.getElementById('btnContratar');
+  const formWrap = document.getElementById('formWrap');
+  const formulario = document.getElementById('formulario');
+  const selLocalidad = document.getElementById('localidad');
+  const selMes = document.getElementById('mes');
+  const inputDia = document.getElementById('dia');
+  const inputDireccion = document.getElementById('direccion');
+  const selHoras = document.getElementById('horas');
+  const precioTexto = document.getElementById('precioTexto');
+
+  btnContratar.addEventListener('click', () => {
+    btnContratar.classList.add('hidden');
+    formWrap.classList.remove('hidden');
+  });
+
+  function calcularPrecio() {
+    const loc = selLocalidad.value;
+    const mes = selMes.value;
+    const horas = parseInt(selHoras.value);
+    if (!loc || !mes || !horas) {
+      precioTexto.textContent = 'seleccioná Localidad, Mes y Horas';
+      precioTexto.classList.add('muted');
+      return null;
+    }
+    let base = PRECIOS[loc][mes];
+    let total = base * horas;
+    precioTexto.textContent = `$ ${total.toFixed(2)} (${horas} hora${horas > 1 ? 's' : ''})`;
+    precioTexto.classList.remove('muted');
+    return total;
+  }
+
+  selLocalidad.addEventListener('change', calcularPrecio);
+  selMes.addEventListener('change', calcularPrecio);
+  selHoras.addEventListener('change', calcularPrecio);
+
+  formulario.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const precio = calcularPrecio();
+    if (precio === null) {
+      alert('Completá Localidad, Mes y Horas');
+      return;
+    }
+    const msg =
+      `Solicitud:%0A` +
+      `• Localidad: ${selLocalidad.value}%0A` +
+      `• Mes: ${selMes.value}%0A` +
+      `• Día: ${inputDia.value}%0A` +
+      `• Dirección: ${inputDireccion.value}%0A` +
+      `• Horas: ${selHoras.value}%0A` +
+      `• Precio: $ ${precio.toFixed(2)}`;
+    const telefono = "5491144382987";
+    window.open(`https://wa.me/${telefono}?text=${msg}`, '_blank');
+  });
+</script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </html>
