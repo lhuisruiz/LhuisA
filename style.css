@@ -130,7 +130,7 @@ h1,
 i {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 32px;
+
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
@@ -229,6 +229,7 @@ button:hover {
     flex-wrap: wrap;
     align-content: flex-start;
     background: #0a0a0a;
+    padding-bottom: 15px;
 }
 
 .galeria-2 {
@@ -245,8 +246,8 @@ button:hover {
 }
 
 :root {
-    --tama-ño: 200px;
-    --tama-ño-v: 300px;
+    --tama-ño: 300px;
+    --tama-ño-v: 400px;
 }
 
 .item {
@@ -257,9 +258,9 @@ button:hover {
     justify-content: flex-end;
     align-content: center;
     flex-direction: column;
-    margin: 30px;
+    margin: 10px;
 
-    width: 250px;
+    width: 300px;
     height: 350px;
     width: var(--tama-ño);
     height: auto;
@@ -281,11 +282,24 @@ button:hover {
 }
 
 
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    margin: 10px;
+    width: 100%;
+    height: auto;
+    border: none;
+    flex-wrap: wrap;
+
+}
 
 
 @media (max-width: 540px) {
     .item {
-        margin: 5px;
+        margin: 1px;
     }
 
     :root {
@@ -312,7 +326,7 @@ button:hover {
 
 @media (max-width: 300px) {
     .item {
-        margin: 5px;
+        margin: 1px;
     }
 
     :root {
@@ -325,18 +339,21 @@ button:hover {
 
 
 .ver-bt {
-    width: 100px;
+
+    width: 160px;
     height: auto;
     border: none;
     background: transparent;
     color: #fff;
     background-color: rgba(255, 0, 0, 0);
-    border-bottom: 3px solid rgb(255, 255, 255);
+
     cursor: pointer;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
     position: absolute;
     z-index: 2;
     padding-bottom: 4px;
+
+    text-align: left;
 }
 
 .ver-bt:hover {
@@ -786,7 +803,8 @@ h1 {
     color: #052b13;
     box-shadow: 0 8px 24px rgba(32, 192, 99, .2);
 }
-.btn-primary:hover{
+
+.btn-primary:hover {
     background-color: rgba(18, 218, 11, 0.541);
 }
 
@@ -851,6 +869,7 @@ select:focus {
     border: 1px dashed #ffffff;
     border-radius: 14px;
     font-size: 14px;
+
 }
 
 .muted {
